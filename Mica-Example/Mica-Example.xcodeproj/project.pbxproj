@@ -32,7 +32,6 @@
 		3CBFB6B619000E67008B2C71 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CBFB69B19000E67008B2C71 /* Foundation.framework */; };
 		3CBFB6B719000E67008B2C71 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CBFB69F19000E67008B2C71 /* UIKit.framework */; };
 		3CBFB6BF19000E67008B2C71 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3CBFB6BD19000E67008B2C71 /* InfoPlist.strings */; };
-		3CBFB6CF190010F1008B2C71 /* readme in Resources */ = {isa = PBXBuildFile; fileRef = 3CBFB6CE190010F1008B2C71 /* readme */; };
 		3CBFB6D31900184D008B2C71 /* NSData+MCData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBFB6D21900184D008B2C71 /* NSData+MCData.m */; };
 		3CE88AB019051B5500AC00A1 /* NSNumber+MCNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE88AAF19051B5500AC00A1 /* NSNumber+MCNumber.m */; };
 		3CE88AB219051CC200AC00A1 /* MCNumberTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE88AB119051CC200AC00A1 /* MCNumberTests.m */; };
@@ -95,7 +94,6 @@
 		3CBFB6BC19000E67008B2C71 /* Mica-ExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mica-ExampleTests-Info.plist"; sourceTree = "<group>"; };
 		3CBFB6BE19000E67008B2C71 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3CBFB6CD19000F2C008B2C71 /* Mica.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Mica.h; path = ../Mica/Mica.h; sourceTree = "<group>"; };
-		3CBFB6CE190010F1008B2C71 /* readme */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = readme; path = ../Mica/readme; sourceTree = "<group>"; };
 		3CBFB6D11900184D008B2C71 /* NSData+MCData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+MCData.h"; path = "../Mica/MCUtilities/NSData+MCData.h"; sourceTree = "<group>"; };
 		3CBFB6D21900184D008B2C71 /* NSData+MCData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+MCData.m"; path = "../Mica/MCUtilities/NSData+MCData.m"; sourceTree = "<group>"; };
 		3CE88AAE19051B5500AC00A1 /* NSNumber+MCNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber+MCNumber.h"; path = "../Mica/MCUtilities/NSNumber+MCNumber.h"; sourceTree = "<group>"; };
@@ -257,7 +255,6 @@
 				3C72CA181904BF02001D68F6 /* MCNetworking */,
 				3CBFB6D019001807008B2C71 /* MCUtilities */,
 				3CBFB6CD19000F2C008B2C71 /* Mica.h */,
-				3CBFB6CE190010F1008B2C71 /* readme */,
 			);
 			name = Mica;
 			sourceTree = "<group>";
@@ -355,7 +352,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CBFB6CF190010F1008B2C71 /* readme in Resources */,
 				3CBFB6A619000E67008B2C71 /* InfoPlist.strings in Resources */,
 				3CBFB6AE19000E67008B2C71 /* Images.xcassets in Resources */,
 			);
