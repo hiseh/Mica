@@ -13,7 +13,7 @@
 @property (nonatomic, assign) float screenWidth;
 @property (nonatomic, assign) float screenHeight;
 
-@property (nonatomic, assign) float appVersion;
+@property (nonatomic, strong) NSString *appVersion;
 
 @property (nonatomic, strong) NSString *systemName;
 @property (nonatomic, assign) float systemVersion;

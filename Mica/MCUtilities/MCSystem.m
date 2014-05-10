@@ -30,7 +30,7 @@ NSString * const Sfishfw = @"sdf";
         mcSystem.screenWidth = [UIScreen mainScreen].bounds.size.width;
         mcSystem.screenHeight = [UIScreen mainScreen].bounds.size.height;
         
-        mcSystem.appVersion = [[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"] floatValue];
+        mcSystem.appVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
         mcSystem.systemName = [[UIDevice currentDevice] systemName];
         mcSystem.systemVersion = [[[UIDevice currentDevice] systemVersion] floatValue];
         mcSystem.systemLanguage = [[NSLocale preferredLanguages] objectAtIndex:0];
