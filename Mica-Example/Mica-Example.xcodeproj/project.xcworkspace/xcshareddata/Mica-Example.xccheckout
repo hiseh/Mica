@@ -10,29 +10,29 @@
 	<string>Mica-Example</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>8DB686DD-1F20-477B-9B3A-2FF9658F8C87</key>
+		<key>585379273FC62AF235CD11D97F9C4103F8C858F4</key>
 		<string>https://github.com/hiseh/Mica.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Mica-Example/Mica-Example.xcodeproj/project.xcworkspace</string>
+	<string>Mica-Example/Mica-Example.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>8DB686DD-1F20-477B-9B3A-2FF9658F8C87</key>
+		<key>585379273FC62AF235CD11D97F9C4103F8C858F4</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/hiseh/Mica.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>8DB686DD-1F20-477B-9B3A-2FF9658F8C87</string>
+	<string>585379273FC62AF235CD11D97F9C4103F8C858F4</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>8DB686DD-1F20-477B-9B3A-2FF9658F8C87</string>
+			<string>585379273FC62AF235CD11D97F9C4103F8C858F4</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Mica</string>
 		</dict>

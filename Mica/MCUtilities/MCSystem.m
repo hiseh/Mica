@@ -12,6 +12,7 @@
 
 NSString * const Sfishfw = @"sdf";
 
+
 @implementation MCSystem
 @synthesize screenWidth;
 @synthesize screenHeight;

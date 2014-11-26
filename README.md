@@ -1,9 +1,10 @@
 Mica
 ====
+Mica is a light library for IOS. 
 
 Version 0.1.0
 
-Support
+Requirements
 -------
 This is tested against IOS 6.0+ and uses ARC.
 
@@ -12,3 +13,9 @@ MCNetwork works on AFNetworking 2.0.
 License
 -------
 Mica is available under the MIT license. See the LICENSE file for more info.
+
+Author
+------
+Created by Hiseh<br />
+[GitHub](https://github.com/hiseh/Mica.git)
+

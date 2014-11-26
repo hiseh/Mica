@@ -20,6 +20,7 @@
 		3C72CA171904BE81001D68F6 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C72CA0E1904BE81001D68F6 /* AFURLSessionManager.m */; };
 		3C72CA1B1904BFB7001D68F6 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C72CA1A1904BFB7001D68F6 /* Security.framework */; };
 		3C72CA1F1904C078001D68F6 /* MCDataTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C72CA1E1904C078001D68F6 /* MCDataTest.m */; };
+		3C8C103F1A0B8152006034CC /* File in Resources */ = {isa = PBXBuildFile; fileRef = 3C8C103E1A0B8152006034CC /* File */; };
 		3CABE6691906AB5700BF46F2 /* MCSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CABE6681906AB5700BF46F2 /* MCSystem.m */; };
 		3CBFB69C19000E67008B2C71 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CBFB69B19000E67008B2C71 /* Foundation.framework */; };
 		3CBFB69E19000E67008B2C71 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CBFB69D19000E67008B2C71 /* CoreGraphics.framework */; };
@@ -77,6 +78,7 @@
 		3C72CA1A1904BFB7001D68F6 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		3C72CA1C1904C01A001D68F6 /* MCUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MCUtilities.h; path = ../Mica/MCUtilities/MCUtilities.h; sourceTree = "<group>"; };
 		3C72CA1E1904C078001D68F6 /* MCDataTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCDataTest.m; path = MCUtilitiesTests/MCDataTest.m; sourceTree = "<group>"; };
+		3C8C103E1A0B8152006034CC /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
 		3CABE6671906AB5700BF46F2 /* MCSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCSystem.h; path = ../Mica/MCUtilities/MCSystem.h; sourceTree = "<group>"; };
 		3CABE6681906AB5700BF46F2 /* MCSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCSystem.m; path = ../Mica/MCUtilities/MCSystem.m; sourceTree = "<group>"; };
 		3CBFB69819000E67008B2C71 /* Mica-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mica-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -276,6 +278,7 @@
 				3CE88AAF19051B5500AC00A1 /* NSNumber+MCNumber.m */,
 				3C485452190554C800779FE5 /* NSString+MCString.h */,
 				3C485453190554C800779FE5 /* NSString+MCString.m */,
+				3C8C103E1A0B8152006034CC /* File */,
 			);
 			name = MCUtilities;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 			files = (
 				3CBFB6A619000E67008B2C71 /* InfoPlist.strings in Resources */,
 				3CBFB6AE19000E67008B2C71 /* Images.xcassets in Resources */,
+				3C8C103F1A0B8152006034CC /* File in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
