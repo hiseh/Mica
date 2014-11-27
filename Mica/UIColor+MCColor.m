@@ -17,6 +17,8 @@
     
     if (! success) {
         return nil;
+    } else if (hexStr.length <=6) {
+        return [UIColor colorFromRGB:hex alpha:1.0];
     } else {
         unsigned color = (hex & 0xFFFFFF00) >> 8;
         CGFloat alpha = 1.0 * (hex & 0xFF) / 255.0;
