@@ -10,6 +10,7 @@
 		3C09FFBC1A26C5030081600E /* Parameters.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C09FFBB1A26C5030081600E /* Parameters.plist */; };
 		3C09FFBF1A26FD4C0081600E /* UIColor+MCColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C09FFBE1A26FD4C0081600E /* UIColor+MCColor.m */; };
 		3C09FFC21A2708DA0081600E /* NSString+MCString.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C09FFC11A2708DA0081600E /* NSString+MCString.m */; };
+		3C350B741A276B5A00979958 /* NSNumber+MCNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C350B731A276B5A00979958 /* NSNumber+MCNumber.m */; };
 		3C9DCCD31A25C133002C4A8B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9DCCD21A25C133002C4A8B /* main.m */; };
 		3C9DCCD61A25C133002C4A8B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9DCCD51A25C133002C4A8B /* AppDelegate.m */; };
 		3C9DCCD91A25C133002C4A8B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9DCCD81A25C133002C4A8B /* ViewController.m */; };
@@ -35,6 +36,9 @@
 		3C09FFBE1A26FD4C0081600E /* UIColor+MCColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+MCColor.m"; path = "../Mica/UIColor+MCColor.m"; sourceTree = "<group>"; };
 		3C09FFC01A2708DA0081600E /* NSString+MCString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+MCString.h"; path = "../Mica/NSString+MCString.h"; sourceTree = "<group>"; };
 		3C09FFC11A2708DA0081600E /* NSString+MCString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+MCString.m"; path = "../Mica/NSString+MCString.m"; sourceTree = "<group>"; };
+		3C350B721A276B5A00979958 /* NSNumber+MCNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber+MCNumber.h"; path = "../Mica/NSNumber+MCNumber.h"; sourceTree = "<group>"; };
+		3C350B731A276B5A00979958 /* NSNumber+MCNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+MCNumber.m"; path = "../Mica/NSNumber+MCNumber.m"; sourceTree = "<group>"; };
+		3C350B751A276C8800979958 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		3C9DCCCD1A25C133002C4A8B /* Mica-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mica-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C9DCCD11A25C133002C4A8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C9DCCD21A25C133002C4A8B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -76,6 +80,8 @@
 				3C09FFBE1A26FD4C0081600E /* UIColor+MCColor.m */,
 				3C09FFC01A2708DA0081600E /* NSString+MCString.h */,
 				3C09FFC11A2708DA0081600E /* NSString+MCString.m */,
+				3C350B721A276B5A00979958 /* NSNumber+MCNumber.h */,
+				3C350B731A276B5A00979958 /* NSNumber+MCNumber.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -119,6 +125,7 @@
 			children = (
 				3C9DCCD11A25C133002C4A8B /* Info.plist */,
 				3C9DCCD21A25C133002C4A8B /* main.m */,
+				3C350B751A276C8800979958 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -253,6 +260,7 @@
 			files = (
 				3C9DCCD91A25C133002C4A8B /* ViewController.m in Sources */,
 				3C9DCCD61A25C133002C4A8B /* AppDelegate.m in Sources */,
+				3C350B741A276B5A00979958 /* NSNumber+MCNumber.m in Sources */,
 				3C9DCCD31A25C133002C4A8B /* main.m in Sources */,
 				3C09FFC21A2708DA0081600E /* NSString+MCString.m in Sources */,
 				3C09FFBF1A26FD4C0081600E /* UIColor+MCColor.m in Sources */,
@@ -331,6 +339,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../Mica,
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -366,6 +379,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../Mica,
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
@@ -377,6 +395,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "Mica-Example/PrefixHeader.pch";
 				INFOPLIST_FILE = "Mica-Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -387,6 +406,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "Mica-Example/PrefixHeader.pch";
 				INFOPLIST_FILE = "Mica-Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

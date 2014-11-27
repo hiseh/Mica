@@ -63,4 +63,42 @@
                                                 rangEnd.location - rangBegin.location - rangBegin.length)];
 }
 
+- (NSString *)stringByClearHTML
+{
+    NSString *text = self;
+    NSRegularExpression *regularExpretion = [NSRegularExpression regularExpressionWithPattern:PATTERN_HTML
+                                                                                      options:0
+                                                                                        error:nil];
+    
+    text = [regularExpretion stringByReplacingMatchesInString:text
+                                                      options:NSMatchingReportProgress
+                                                        range:NSMakeRange(0, [text length])
+                                                 withTemplate:@""];
+    
+    NSRegularExpression *regular2 = [NSRegularExpression regularExpressionWithPattern:@"&[^\S]*;"
+                                                                              options:0
+                                                                                error:nil];
+    text = [regular2 stringByReplacingMatchesInString:text
+                                              options:NSMatchingReportProgress
+                                                range:NSMakeRange(0, [text length])
+                                         withTemplate:@""];
+    return text;
+}
+
+#pragma mark -
++ (NSString *)randomString:(NSUInteger)width randomStringType:(RandomStringType)randomStringType {
+    NSMutableString *result = [[NSMutableString alloc] initWithCapacity:width];
+    switch (randomStringType) {
+        case OnlyAlphabet:
+            for (int i = 0; i < width; i ++) {
+                char tempC = [NSNumber random:26] + 97;
+                [result appendFormat:@"%c", tempC];
+            }
+            break;
+        default:
+            break;
+    }
+    return result;
+}
+
 @end

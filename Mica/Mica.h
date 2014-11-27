@@ -11,5 +11,6 @@
 
 #import "UIColor+MCColor.h"
 #import "NSString+MCString.h"
+#import "NSNumber+MCNumber.h"
 
 #endif
