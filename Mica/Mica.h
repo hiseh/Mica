@@ -10,5 +10,6 @@
 #define Mica_Example_Mica_h
 
 #import "UIColor+MCColor.h"
+#import "NSString+MCString.h"
 
 #endif
