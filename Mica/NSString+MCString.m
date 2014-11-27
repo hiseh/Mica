@@ -38,4 +38,29 @@
     }
 }
 
+- (NSString *)substringBetween:(NSString *)beginStr endStr:(NSString *)endStr {
+    NSRange rangBegin;
+    if ([beginStr isEmpty]) {
+        rangBegin = NSMakeRange(0, 0);
+    } else {
+        rangBegin = [self rangeOfString:beginStr];
+    }
+    
+    if (rangBegin.location == NSNotFound) {
+        return @"";
+    }
+    
+    NSRange rangEnd;
+    if (![endStr isEmpty]) {
+        rangEnd = [self rangeOfString:endStr
+                              options:NSLiteralSearch
+                                range:NSMakeRange(rangBegin.location + rangBegin.length,
+                                                  self.length - rangBegin.location - rangBegin.length)];
+    } else {
+        rangEnd = NSMakeRange([self length], 0);
+    }
+    return [self substringWithRange:NSMakeRange(rangBegin.location + rangBegin.length,
+                                                rangEnd.location - rangBegin.location - rangBegin.length)];
+}
+
 @end

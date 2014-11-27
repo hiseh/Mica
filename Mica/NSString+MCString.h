@@ -12,5 +12,6 @@
 
 - (BOOL)isEmpty;
 - (BOOL)isContentSubstring:(NSString *)substring;
+- (NSString *)substringBetween:(NSString *)beginStr endStr:(NSString *)endStr;
 
 @end
