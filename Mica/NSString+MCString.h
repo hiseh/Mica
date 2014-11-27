@@ -11,6 +11,6 @@
 @interface NSString (MCString)
 
 - (BOOL)isEmpty;
-- (BOOL)isContentSubstring:(NSString *)substring
+- (BOOL)isContentSubstring:(NSString *)substring;
 
 @end
