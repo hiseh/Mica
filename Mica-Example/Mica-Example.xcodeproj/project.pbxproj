@@ -18,6 +18,7 @@
 		3C9DCCDE1A25C133002C4A8B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C9DCCDD1A25C133002C4A8B /* Images.xcassets */; };
 		3C9DCCE11A25C133002C4A8B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C9DCCDF1A25C133002C4A8B /* LaunchScreen.xib */; };
 		3C9DCCED1A25C133002C4A8B /* Mica_ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9DCCEC1A25C133002C4A8B /* Mica_ExampleTests.m */; };
+		3CACD9BD1A280F18008220AB /* MCStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CACD9BC1A280F18008220AB /* MCStringTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		3C9DCCEB1A25C133002C4A8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C9DCCEC1A25C133002C4A8B /* Mica_ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mica_ExampleTests.m; sourceTree = "<group>"; };
 		3C9DCCF81A25C1B9002C4A8B /* Mica.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Mica.h; path = ../Mica/Mica.h; sourceTree = "<group>"; };
+		3CACD9BC1A280F18008220AB /* MCStringTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCStringTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 		3C9DCCE91A25C133002C4A8B /* Mica-ExampleTests */ = {
 			isa = PBXGroup;
 			children = (
+				3CACD9BC1A280F18008220AB /* MCStringTests.m */,
 				3C9DCCEC1A25C133002C4A8B /* Mica_ExampleTests.m */,
 				3C9DCCEA1A25C133002C4A8B /* Supporting Files */,
 			);
@@ -271,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CACD9BD1A280F18008220AB /* MCStringTests.m in Sources */,
 				3C9DCCED1A25C133002C4A8B /* Mica_ExampleTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
