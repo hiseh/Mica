@@ -30,7 +30,7 @@
     return NO;
 }
 
-- (BOOL)isContentSubstring:(NSString *)substring {
+- (BOOL)isContainSubstring:(NSString *)substring {
     if ([self isEmpty] || [substring isEmpty]) {
         return NO;
     } else {

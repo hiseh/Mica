@@ -18,7 +18,7 @@ typedef enum {
 @interface NSString (MCString)
 
 - (BOOL)isEmpty;
-- (BOOL)isContentSubstring:(NSString *)substring;
+- (BOOL)isContainSubstring:(NSString *)substring;
 - (NSString *)substringBetween:(NSString *)beginStr endStr:(NSString *)endStr;
 - (NSString *)stringByClearHTML;
 
