@@ -6,6 +6,8 @@
 //  Copyright (c) 2014年 hiseh. All rights reserved.
 //
 
+NSString * const PATTERN_HTML = @"<[^>]*>|\n";  //HTML标记
+
 #import "NSString+MCString.h"
 
 @implementation NSString (MCString)

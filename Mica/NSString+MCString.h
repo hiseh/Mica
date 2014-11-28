@@ -6,7 +6,6 @@
 //  Copyright (c) 2014年 hiseh. All rights reserved.
 //
 
-#define PATTERN_HTML @"<[^>]*>|\n"  //HTML标记
 typedef enum {
     OnlyAlphabet = 0,
     NumberAndAlphabet,

@@ -11,5 +11,6 @@
 @interface UIColor (MCColor)
 
 + (UIColor *)colorFromHEX:(NSString *)hexStr;
++ (UIColor *)colorFromPlistWithKey:(NSString *)key;
 
 @end

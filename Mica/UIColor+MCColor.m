@@ -6,9 +6,15 @@
 //  Copyright (c) 2014年 hiseh. All rights reserved.
 //
 
+NSString * const plistFile = @"Parameters";
+
 #import "UIColor+MCColor.h"
 
 @implementation UIColor (MCColor)
+
++ (UIColor *)colorFromPlistWithKey:(NSString *)key {
+    
+}
 
 + (UIColor *)colorFromHEX:(NSString *)hexStr {
     NSScanner *scanner = [NSScanner scannerWithString:hexStr];

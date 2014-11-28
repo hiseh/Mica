@@ -3,9 +3,26 @@
 <plist version="1.0">
 <dict>
 	<key>Color</key>
-	<dict/>
+	<dict>
+		<key>PinkColor</key>
+		<string>d90070</string>
+	</dict>
 	<key>Label</key>
-	<dict/>
+	<dict>
+		<key>Title</key>
+		<dict>
+			<key>Font</key>
+			<string>bold:14</string>
+			<key>TextColor</key>
+			<string>PinkColor</string>
+			<key>TextAlign</key>
+			<string>center</string>
+			<key>BackgroundColor</key>
+			<string>nil</string>
+			<key>Border</key>
+			<string>nil</string>
+		</dict>
+	</dict>
 	<key>TextField</key>
 	<dict/>
 	<key>TextView</key>
