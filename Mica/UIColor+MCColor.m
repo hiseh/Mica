@@ -6,14 +6,16 @@
 //  Copyright (c) 2014年 hiseh. All rights reserved.
 //
 
-NSString * const plistFile = @"Parameters";
+NSString * const PLIST_FILE = @"Parameters";
 
 #import "UIColor+MCColor.h"
 
 @implementation UIColor (MCColor)
 
 + (UIColor *)colorFromPlistWithKey:(NSString *)key {
+//    NSString *pathToFilgge = [[NSBundle bundleForClass:[self class]] pathForResource:PLIST_FILE ofType:@"plist"];
     
+    return nil;
 }
 
 + (UIColor *)colorFromHEX:(NSString *)hexStr {
