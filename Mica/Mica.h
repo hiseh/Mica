@@ -13,4 +13,7 @@
 #import "NSString+MCString.h"
 #import "NSNumber+MCNumber.h"
 
+
+#define PLIST_FILE @"Parameters"
+
 #endif

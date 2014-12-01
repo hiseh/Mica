@@ -11,16 +11,23 @@
 	<dict>
 		<key>Title</key>
 		<dict>
-			<key>Font</key>
-			<string>bold:14</string>
+			<key>FontSize</key>
+			<integer>14</integer>
+			<key>Bold</key>
+			<false/>
 			<key>TextColor</key>
 			<string>PinkColor</string>
-			<key>TextAlign</key>
-			<string>center</string>
 			<key>BackgroundColor</key>
-			<string>nil</string>
+			<string></string>
 			<key>Border</key>
-			<string>nil</string>
+			<dict>
+				<key>Color</key>
+				<string>PinkColor</string>
+				<key>Width</key>
+				<real>0.5</real>
+			</dict>
+			<key>CornerRadius</key>
+			<integer>10</integer>
 		</dict>
 	</dict>
 	<key>TextField</key>
