@@ -9,13 +9,16 @@
 NSString * const PLIST_FILE = @"Parameters";
 
 #import "UIColor+MCColor.h"
+#import "PlistModel.h"
 
 @implementation UIColor (MCColor)
 
 + (UIColor *)colorFromPlistWithKey:(NSString *)key {
-//    NSString *pathToFilgge = [[NSBundle bundleForClass:[self class]] pathForResource:PLIST_FILE ofType:@"plist"];
+    PlistModel *plist = [PlistModel plistNamed:PLIST_FILE];
+    NSDictionary *colorDict = (NSDictionary *)[plist objectForKey:@"Color"];
+    NSString *hexValue = [colorDict objectForKey:key];
     
-    return nil;
+    return [UIColor colorFromHEX:hexValue];
 }
 
 + (UIColor *)colorFromHEX:(NSString *)hexStr {

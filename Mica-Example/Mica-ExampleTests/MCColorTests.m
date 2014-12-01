@@ -26,9 +26,17 @@
     [super tearDown];
 }
 
-- (void)test_MCColor {
+- (void)test_colorFromHEX {
     {
         UIColor *a = [UIColor colorFromHEX:@"d90070"];
+        UIColor *b = [UIColor colorWithRed:217.0/255.0 green:0.0 blue:112.0/255.0 alpha:1.0];
+        XCTAssertEqualObjects(a, b);
+    }
+}
+
+- (void)text_colorFromPlistWithKey {
+    {
+        UIColor *a = [UIColor colorFromPlistWithKey:@"PinkColor"];
         UIColor *b = [UIColor colorWithRed:217.0/255.0 green:0.0 blue:112.0/255.0 alpha:1.0];
         XCTAssertEqualObjects(a, b);
     }
