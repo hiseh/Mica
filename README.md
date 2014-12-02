@@ -18,9 +18,9 @@ Mica is available under the MIT license. See the LICENSE file for more info.
 
 ##Document
 ###Create UIColor Object with HEX Value
-`objective-c
+```objective-c
 [UIColor colorFromHEX:@"d90070"]
-`
+```
 
 ##Author
 
