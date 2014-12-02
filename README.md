@@ -31,10 +31,10 @@ You can define the `MC_PARAMETERS_FILE` variability in Mica.h file. The parameer
 ```
 **Parameters**<br />
 `hexStr`: The HEX Value. If only include r/g/b color value, alpha value will be 1.0.
-<br /><br />
+<br />
 **Return Value**<br />
 return UIColor Object.
-<br /><br />
+<br />
 **Example**<br />
 ```objective-c
 [UIColor colorFromHEX:@"d90070"]
