@@ -11,9 +11,9 @@ Mica is available under the MIT license. See the LICENSE file for more info.
 
 ##Architecture
 - UIColor<br />
-'''objective-c
+```objective-c
 [UIColor colorFromHEX:@"d90070"]
-'''
+```
 
 Author
 ------
