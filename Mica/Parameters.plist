@@ -69,8 +69,31 @@
 		</dict>
 	</dict>
 	<key>TextView</key>
-	<dict/>
-	<key>View</key>
-	<dict/>
+	<dict>
+		<key>Normal</key>
+		<dict>
+			<key>FontSize</key>
+			<integer>17</integer>
+			<key>Bold</key>
+			<false/>
+			<key>TextColor</key>
+			<string>PinkColor</string>
+			<key>BackgroundColor</key>
+			<string>ffffff</string>
+			<key>Border</key>
+			<dict>
+				<key>Color</key>
+				<string>PinkColor</string>
+				<key>Width</key>
+				<real>0.5</real>
+			</dict>
+			<key>CornerRadius</key>
+			<integer>10</integer>
+			<key>ShowClearButton</key>
+			<true/>
+			<key>ScrollEnabled</key>
+			<true/>
+		</dict>
+	</dict>
 </dict>
 </plist>
