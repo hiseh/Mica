@@ -6,15 +6,17 @@
 	<dict>
 		<key>PinkColor</key>
 		<string>d90070</string>
+		<key>BodyTextColor</key>
+		<string>000000</string>
 	</dict>
 	<key>Label</key>
 	<dict>
 		<key>Title</key>
 		<dict>
 			<key>FontSize</key>
-			<integer>14</integer>
+			<integer>17</integer>
 			<key>Bold</key>
-			<false/>
+			<true/>
 			<key>TextColor</key>
 			<string>PinkColor</string>
 			<key>BackgroundColor</key>
@@ -28,6 +30,17 @@
 			</dict>
 			<key>CornerRadius</key>
 			<integer>10</integer>
+		</dict>
+		<key>Body</key>
+		<dict>
+			<key>FontSize</key>
+			<string>15</string>
+			<key>Bold</key>
+			<false/>
+			<key>TextColor</key>
+			<string>BodyTextColor</string>
+			<key>BackgroundColor</key>
+			<string></string>
 		</dict>
 	</dict>
 	<key>TextField</key>

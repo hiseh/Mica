@@ -28,17 +28,15 @@
 }
 
 - (void)test_labelFromPlistWithKey {
-    UILabel *a = [UILabel labelFromPlistWithKey:@"Title"];
-    UILabel *b = [[UILabel alloc] init];
-    b.font = [UIFont systemFontOfSize:14.0f];
-    b.textColor = [UIColor colorFromPlistWithKey:@"PinkColor"];
-    b.backgroundColor = [UIColor clearColor];
-    b.layer.borderWidth = 0.5;
-    b.layer.borderColor = [UIColor colorFromPlistWithKey:@"PinkColor"].CGColor;
-    b.layer.cornerRadius = 10;
-//    XCTAssertEqualObjects(a, b);
-    XCTAssertTrue([a isKindOfClass:[UILabel class]]);
+    {
+        UILabel *a = [UILabel labelFromPlistWithKey:@"Title"];
+        XCTAssertTrue([a isKindOfClass:[UILabel class]]);
+    }
     
+    {
+        UILabel *b = [UILabel labelFromPlistWithKey:@"Body"];
+        XCTAssertTrue([b isKindOfClass:[UILabel class]]);
+    }
 }
 
 - (void)testPerformanceExample {
