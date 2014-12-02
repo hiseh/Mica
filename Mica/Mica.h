@@ -13,6 +13,10 @@
 #import "NSString+MCString.h"
 #import "NSNumber+MCNumber.h"
 
+#import "UITextField+MCTextField.h"
+#import "UILabel+MCLabel.h"
+#import "UITextView+MCTextView.h"
+
 
 #define PLIST_FILE @"Parameters"
 
