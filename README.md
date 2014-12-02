@@ -29,18 +29,30 @@ You can define the `MC_PARAMETERS_FILE` variability in Mica.h file. The parameer
 ```objective-c
 + (UIColor *)colorFromHEX:(NSString *)hexStr;
 ```
+<br />
 **Parameters**<br />
 `hexStr`: The HEX Value. If only include r/g/b color value, alpha value will be 1.0.
-<br />
+<br /><br />
 **Return Value**<br />
 return UIColor Object.
-<br />
+<br /><br />
 **Example**<br />
 ```objective-c
 [UIColor colorFromHEX:@"d90070"]
 ```
 
 ####Create UIColor Object from Parameters File
+```objective-c
++ (UIColor *)colorFromPlistWithKey:(NSString *)key;
+```
+<br />
+**Parameters**<br />
+`key`: The parameters file key value. It must be the subkey of Color.
+<br /><br />
+**Return Value**<br />
+return UIColor Object.
+<br /><br />
+**Example**<br />
 ```objective-c
 [UIColor colorFromPlistWithKey:@"PinkColor"]
 ```
