@@ -12,7 +12,7 @@
 @implementation UIColor (MCColor)
 
 + (UIColor *)colorFromPlistWithKey:(NSString *)key {
-    PlistModel *plist = [PlistModel plistNamed:PLIST_FILE];
+    PlistModel *plist = [PlistModel plistNamed:MC_PARAMETERS_FILE];
     NSDictionary *colorDict = (NSDictionary *)[plist objectForKey:@"Color"];
     NSString *hexValue = [colorDict objectForKey:key];
     

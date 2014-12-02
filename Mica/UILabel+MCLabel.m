@@ -13,7 +13,7 @@
 @implementation UILabel (MCLabel)
 
 + (UILabel *)labelFromPlistWithKey:(NSString *)key {
-    PlistModel *plist = [PlistModel plistNamed:PLIST_FILE];
+    PlistModel *plist = [PlistModel plistNamed:MC_PARAMETERS_FILE];
     NSDictionary *labelDict = [(NSDictionary *)[plist objectForKey:@"Label"] objectForKey:key];
     
     UILabel *label = [[UILabel alloc] init];

@@ -18,6 +18,6 @@
 #import "UITextView+MCTextView.h"
 
 
-#define PLIST_FILE @"Parameters"
+#define MC_PARAMETERS_FILE @"Parameters"
 
 #endif

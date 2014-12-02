@@ -13,7 +13,7 @@
 @implementation UITextField (MCTextField)
 
 + (UITextField *)textfieldFromPlistWithKey:(NSString *)key {
-    PlistModel *plist = [PlistModel plistNamed:PLIST_FILE];
+    PlistModel *plist = [PlistModel plistNamed:MC_PARAMETERS_FILE];
     NSDictionary *textfieldDict = [(NSDictionary *)[plist objectForKey:@"TextField"] objectForKey:key];
     
     UITextField *textfield = [[UITextField alloc] init];

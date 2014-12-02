@@ -13,7 +13,7 @@
 @implementation UITextView (MCTextView)
 
 + (UITextView *)textviewFromPlistWithKey:(NSString *)key {
-    PlistModel *plist = [PlistModel plistNamed:PLIST_FILE];
+    PlistModel *plist = [PlistModel plistNamed:MC_PARAMETERS_FILE];
     NSDictionary *textviewDict = [(NSDictionary *)[plist objectForKey:@"TextView"] objectForKey:key];
     
     UITextView *textview = [[UITextView alloc] init];
