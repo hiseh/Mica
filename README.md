@@ -88,6 +88,7 @@ return UILabel Object.
 - `Border`
 	* `Color` The color of label's border color. It shoud be HEX String or Color property.
 	* `Width` The width of label's border width.
+- `CornerRadius` The label's layer corner radius.
 <br /><br />
 **Return Value**<br />
 return UITextField Object.
