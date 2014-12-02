@@ -12,6 +12,11 @@ License
 -------
 Mica is available under the MIT license. See the LICENSE file for more info.
 
+Document
+-----------
+- UIColor
+<code>[UIColor colorFromHEX:@"d90070"]</code>
+
 Author
 ------
 Created by Hiseh<br />
