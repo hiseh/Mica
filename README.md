@@ -80,6 +80,7 @@ return UILabel Object.
 <br />
 **Parameters**<br />
 `key`: The parameters file key value. It must be the subkey of TextField.<br />
+*Dictionary*
 - `FontSize` The points of label text's font size.
 - `Bold` If the value is `YES`, the font of text will be rendered in boldface else standard face.
 - `TextColor` The font color of text. Value shoud be HEX String or Color property.
