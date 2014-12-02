@@ -11,7 +11,7 @@ Mica is available under the MIT license. See the LICENSE file for more info.
 
 ##Architecture
 * `MCUtilities`
-	- `UIColor+MCColor`
+- `UIColor+MCColor`
 
 Author
 ------
