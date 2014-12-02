@@ -83,7 +83,7 @@ return UILabel Object.
 - `FontSize` The points of label text's font size.
 - `Bold` If the value is `YES`, the font of text will be rendered in boldface else standard face.
 - `TextColor` The font color of text. Value shoud be HEX String or Color property.
-- `BackgroundColor` The label background-color. If the value is empty, the `label.backgroundColor` will be `[UIColor clearColor]`
+- `BackgroundColor` The label background-color. If the value is empty, the backgroundColor of this object will be `[UIColor clearColor]`
 <br /><br />
 **Return Value**<br />
 return UITextField Object.
