@@ -10,11 +10,20 @@ This is tested against IOS 6.0+ and uses ARC.
 Mica is available under the MIT license. See the LICENSE file for more info.
 
 ##Architecture
-* `MCUtilities`
-- `UIColor+MCColor`
+* `MCUI`
+	- `UIColor+MCColor`
+	- `UILabel+MCLabel`
+	- `UITextField+MCTextField`
+	- `UITextView+MCTextView`
 
-Author
-------
+##Document
+###Create UIColor Object with HEX Value
+`objective-c
+[UIColor colorFromHEX:@"d90070"]
+`
+
+##Author
+
 Created by Hiseh<br />
 [GitHub](https://github.com/hiseh/Mica.git)
 
