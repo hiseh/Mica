@@ -15,13 +15,16 @@ Mica is available under the MIT license. See the LICENSE file for more info.
 	- `UILabel+MCLabel`
 	- `UITextField+MCTextField`
 	- `UITextView+MCTextView`
+* `MCUtilities`
+	- `NSNumber+MCNumber`
+	- `NSString+MCString`
 
 ##Document
 ###Parameters File
 You can define the `MC_PARAMETERS_FILE` variability in Mica.h file. The parameers file architecutre is
 ![Parameters File Screenshot](/doc/parameters_file_screenshot.png)
 
-###UIColor+MCColor
+###MCUI
 ####Create UIColor Object with HEX Value
 ```objective-c
 [UIColor colorFromHEX:@"d90070"]
@@ -29,6 +32,21 @@ You can define the `MC_PARAMETERS_FILE` variability in Mica.h file. The parameer
 ####Create UIColor Object from Parameters File
 ```objective-c
 [UIColor colorFromPlistWithKey:@"PinkColor"]
+```
+
+####Create UILabel Object from Parameters File
+```objective-c
+[UILabel labelFromPlistWithKey:@"Title"]
+```
+
+####Create UITextField Object from Parameters File
+```objective-c
+[UITextField textfieldFromPlistWithKey:@"Signup"]
+```
+
+####Create UITextView Object from Parameters File
+```objective-c
+[UITextView textviewFromPlistWithKey:@"Normal"]
 ```
 
 ##Author
