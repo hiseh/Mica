@@ -79,12 +79,15 @@ return UILabel Object.
 ```
 <br />
 **Parameters**<br />
-`key`: The parameters file key value. It must be the subkey of TextField.<br />
-*Dictionary*
+`key`: The parameters file key value. It must be the subkey of TextField.<br /><br />
+*Parameters*
 - `FontSize` The points of label text's font size.
-- `Bold` If the value is `YES`, the font of text will be rendered in boldface else standard face.
-- `TextColor` The font color of text. Value shoud be HEX String or Color property.
-- `BackgroundColor` The background color label. If the value is empty, the background color will be `[UIColor clearColor]`
+- `Bold` If it is `YES`, the font of text will be rendered in boldface else standard face.
+- `TextColor` The font color of text. It shoud be HEX String or Color property.
+- `BackgroundColor` The background color label. If it is empty, the background color will be `[UIColor clearColor]`
+- `Border`
+	* `Color` The color of label's border color. It shoud be HEX String or Color property.
+	* `Width` The width of label's border width.
 <br /><br />
 **Return Value**<br />
 return UITextField Object.
