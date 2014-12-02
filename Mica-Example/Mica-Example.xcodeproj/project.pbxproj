@@ -14,6 +14,8 @@
 		3C4C0CEF1A2C4E0400BC6CB1 /* PlistModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C0CEE1A2C4E0400BC6CB1 /* PlistModel.m */; };
 		3C4C0CF21A2C531A00BC6CB1 /* UILabel+MCLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C0CF11A2C531A00BC6CB1 /* UILabel+MCLabel.m */; };
 		3C4C0CF41A2C5D7500BC6CB1 /* MCLabelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C0CF31A2C5D7500BC6CB1 /* MCLabelTests.m */; };
+		3C9B48DE1A2D5FD000623E1A /* UITextField+MCTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9B48DD1A2D5FD000623E1A /* UITextField+MCTextField.m */; };
+		3C9B48E01A2D61F500623E1A /* MCTextFieldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9B48DF1A2D61F500623E1A /* MCTextFieldTests.m */; };
 		3C9DCCD31A25C133002C4A8B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9DCCD21A25C133002C4A8B /* main.m */; };
 		3C9DCCD61A25C133002C4A8B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9DCCD51A25C133002C4A8B /* AppDelegate.m */; };
 		3C9DCCD91A25C133002C4A8B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9DCCD81A25C133002C4A8B /* ViewController.m */; };
@@ -50,6 +52,9 @@
 		3C4C0CF01A2C531A00BC6CB1 /* UILabel+MCLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+MCLabel.h"; path = "../Mica/UILabel+MCLabel.h"; sourceTree = "<group>"; };
 		3C4C0CF11A2C531A00BC6CB1 /* UILabel+MCLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UILabel+MCLabel.m"; path = "../Mica/UILabel+MCLabel.m"; sourceTree = "<group>"; };
 		3C4C0CF31A2C5D7500BC6CB1 /* MCLabelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCLabelTests.m; sourceTree = "<group>"; };
+		3C9B48DC1A2D5FD000623E1A /* UITextField+MCTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITextField+MCTextField.h"; path = "../Mica/UITextField+MCTextField.h"; sourceTree = "<group>"; };
+		3C9B48DD1A2D5FD000623E1A /* UITextField+MCTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITextField+MCTextField.m"; path = "../Mica/UITextField+MCTextField.m"; sourceTree = "<group>"; };
+		3C9B48DF1A2D61F500623E1A /* MCTextFieldTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCTextFieldTests.m; sourceTree = "<group>"; };
 		3C9DCCCD1A25C133002C4A8B /* Mica-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mica-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C9DCCD11A25C133002C4A8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C9DCCD21A25C133002C4A8B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -98,6 +103,8 @@
 				3C09FFBE1A26FD4C0081600E /* UIColor+MCColor.m */,
 				3C4C0CF01A2C531A00BC6CB1 /* UILabel+MCLabel.h */,
 				3C4C0CF11A2C531A00BC6CB1 /* UILabel+MCLabel.m */,
+				3C9B48DC1A2D5FD000623E1A /* UITextField+MCTextField.h */,
+				3C9B48DD1A2D5FD000623E1A /* UITextField+MCTextField.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -165,6 +172,7 @@
 				3C9DCCEC1A25C133002C4A8B /* Mica_ExampleTests.m */,
 				3C9DCCEA1A25C133002C4A8B /* Supporting Files */,
 				3C4C0CF31A2C5D7500BC6CB1 /* MCLabelTests.m */,
+				3C9B48DF1A2D61F500623E1A /* MCTextFieldTests.m */,
 			);
 			path = "Mica-ExampleTests";
 			sourceTree = "<group>";
@@ -304,6 +312,7 @@
 				3C4C0CF21A2C531A00BC6CB1 /* UILabel+MCLabel.m in Sources */,
 				3C09FFC21A2708DA0081600E /* NSString+MCString.m in Sources */,
 				3C09FFBF1A26FD4C0081600E /* UIColor+MCColor.m in Sources */,
+				3C9B48DE1A2D5FD000623E1A /* UITextField+MCTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CACD9BD1A280F18008220AB /* MCStringTests.m in Sources */,
+				3C9B48E01A2D61F500623E1A /* MCTextFieldTests.m in Sources */,
 				3C9DCCED1A25C133002C4A8B /* Mica_ExampleTests.m in Sources */,
 				3C4C0CF41A2C5D7500BC6CB1 /* MCLabelTests.m in Sources */,
 				3CACD9BF1A28208C008220AB /* MCNumberTests.m in Sources */,
