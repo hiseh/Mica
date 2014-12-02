@@ -59,21 +59,56 @@ return UIColor Object.
 
 ####Create UILabel Object from Parameters File
 ```objective-c
++ (UILabel *)labelFromPlistWithKey:(NSString *)key;
+```
+<br />
+**Parameters**<br />
+`key`: The parameters file key value. It must be the subkey of Label.
+<br /><br />
+**Return Value**<br />
+return UILabel Object.
+<br /><br />
+**Example**<br />
+```objective-c
 [UILabel labelFromPlistWithKey:@"Title"]
 ```
 
 ####Create UITextField Object from Parameters File
+```objective-c
++ (UITextField *)textfieldFromPlistWithKey:(NSString *)key;
+```
+<br />
+**Parameters**<br />
+`key`: The parameters file key value. It must be the subkey of TextField.<br />
+- `FontSize` The points of label text's font size.
+- `Bold` If the value is `YES`, the font of text will be rendered in boldface else standard face.
+- `TextColor` The font color of text.
+<br /><br />
+**Return Value**<br />
+return UITextField Object.
+<br /><br />
+**Example**<br />
 ```objective-c
 [UITextField textfieldFromPlistWithKey:@"Signup"]
 ```
 
 ####Create UITextView Object from Parameters File
 ```objective-c
++ (UITextView *)textviewFromPlistWithKey:(NSString *)key;
+```
+<br />
+**Parameters**<br />
+`key`: The parameters file key value. It must be the subkey of TextView.
+<br /><br />
+**Return Value**<br />
+return UITextView Object.
+<br /><br />
+**Example**<br />
+```objective-c
 [UITextView textviewFromPlistWithKey:@"Normal"]
 ```
 
 ##Author
-
 Created by Hiseh<br />
 [GitHub](https://github.com/hiseh/Mica.git)
 
