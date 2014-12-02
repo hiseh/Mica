@@ -10,10 +10,8 @@ This is tested against IOS 6.0+ and uses ARC.
 Mica is available under the MIT license. See the LICENSE file for more info.
 
 ##Architecture
-- UIColor<br />
-```objective-c
-[UIColor colorFromHEX:@"d90070"]
-```
+* `MCUtilities`
+	- `UIColor+MCColor`
 
 Author
 ------
