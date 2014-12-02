@@ -21,9 +21,14 @@ Mica is available under the MIT license. See the LICENSE file for more info.
 You can define the `MC_PARAMETERS_FILE` variability in Mica.h file. The parameers file architecutre is
 ![Parameters File Screenshot](/doc/parameters_file_screenshot.png)
 
-###Create UIColor Object with HEX Value
+###UIColor+MCColor
+####Create UIColor Object with HEX Value
 ```objective-c
 [UIColor colorFromHEX:@"d90070"]
+```
+####Create UIColor Object from Parameters File
+```objective-c
+[UIColor colorFromPlistWithKey:@"PinkColor"]
 ```
 
 ##Author
