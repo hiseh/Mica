@@ -1,12 +1,13 @@
 //
 //  MCListView.m
-//  Mica-Example
+//  Mica
 //
 //  Created by hiseh yin on 14/12/3.
 //  Copyright (c) 2014年 hiseh. All rights reserved.
 //
 
 #import "MCListView.h"
+#import "SVPullToRefresh.h"
 
 @implementation MCListView
 @synthesize delegate;
@@ -52,33 +53,36 @@
             {
                 [__tableView addInfiniteScrollingWithActionHandler:^{
                     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-                        [weakSelf.delegate iDouKouListViewWillLoadMore];
+                        [weakSelf.delegate MCListViewWillLoadMore];
                     });
                 }];
                 break;
             }
-            case pullActionRefresh:
+            case PullActionRefresh:
             {
                 [__tableView addPullToRefreshWithActionHandler:^{
-                    [weakSelf.delegate iDouKouListViewWillRefresh];
+                    [weakSelf.delegate MCListViewWillRefresh];
                 }];
                 break;
             }
-            case pullActionRefreshAndLoadMore:
+            case PullActionRefreshAndLoadMore:
             {
                 [__tableView addInfiniteScrollingWithActionHandler:^{
                     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-                        [weakSelf.delegate iDouKouListViewWillLoadMore];
+                        [weakSelf.delegate MCListViewWillLoadMore];
                     });
+                }];
+                [__tableView addPullToRefreshWithActionHandler:^{
+                    [weakSelf.delegate MCListViewWillRefresh];
                 }];
                 break;
             }
-            case pullActionNone:
+            case PullActionNone:
                 break;
         }
         
-        [__tableView.infiniteScrollingView setCustomView:[UIView viewWithloadMorePointer] forState:SVInfiniteScrollingStateTriggered];
-        [__tableView.infiniteScrollingView setCustomView:[UIView viewWithLoadingPointer] forState:SVInfiniteScrollingStateLoading];
+        [__tableView.infiniteScrollingView setCustomView:[[UIView alloc] initWithLoadMoreIndicator] forState:SVInfiniteScrollingStateTriggered];
+        [__tableView.infiniteScrollingView setCustomView:[[UIView alloc] initWithLoadingIndicator] forState:SVInfiniteScrollingStateLoading];
     }
 }
 

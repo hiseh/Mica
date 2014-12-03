@@ -95,5 +95,14 @@
 			<true/>
 		</dict>
 	</dict>
+	<key>UIView</key>
+	<dict>
+		<key>LargeCorner</key>
+		<integer>10</integer>
+		<key>MiddleCorner</key>
+		<integer>5</integer>
+		<key>LittleCorner</key>
+		<integer>2</integer>
+	</dict>
 </dict>
 </plist>

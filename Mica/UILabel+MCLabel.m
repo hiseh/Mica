@@ -12,58 +12,68 @@
 
 @implementation UILabel (MCLabel)
 
-+ (UILabel *)labelFromPlistWithKey:(NSString *)key {
-    PlistModel *plist = [PlistModel plistNamed:MC_PARAMETERS_FILE];
-    NSDictionary *labelDict = [(NSDictionary *)[plist objectForKey:@"Label"] objectForKey:key];
+- (instancetype)initWithFrame:(CGRect)frame parameterKey:(NSString *)key {
+    self = [super initWithFrame:frame];
+    if (self) {
+        PlistModel *plist = [PlistModel plistNamed:MC_PARAMETERS_FILE];
+        NSDictionary *parametersDict = [(NSDictionary *)[plist objectForKey:@"Label"] objectForKey:key];
     
-    UILabel *label = [[UILabel alloc] init];
-    label.font = [[labelDict objectForKey:@"Bold"] boolValue]? [UIFont boldSystemFontOfSize:[[labelDict objectForKey:@"FontSize"] floatValue]]: [UIFont systemFontOfSize:[[labelDict objectForKey:@"FontSize"] floatValue]];
-    {
-        NSString *colorStr = [labelDict objectForKey:@"TextColor"];
-        UIColor *textColor = [UIColor colorFromHEX:colorStr];
-        if (textColor) {
-            label.textColor = textColor;
-        } else {
-            label.textColor = [UIColor colorFromPlistWithKey:colorStr];
-        }
-    }
-    
-    {
-        NSString *colorStr = [labelDict objectForKey:@"BackgroundColor"];
-        if ([colorStr isEmpty]) {
-            label.backgroundColor = [UIColor clearColor];
-        } else {
-            UIColor *backgroundColor = [UIColor colorFromHEX:colorStr];
-            if (backgroundColor) {
-                label.backgroundColor = backgroundColor;
+        self.font = [[parametersDict objectForKey:@"Bold"] boolValue]? [UIFont boldSystemFontOfSize:[[parametersDict objectForKey:@"FontSize"] floatValue]]: [UIFont systemFontOfSize:[[parametersDict objectForKey:@"FontSize"] floatValue]];
+        {
+            NSString *colorStr = [parametersDict objectForKey:@"TextColor"];
+            UIColor *textColor = [UIColor colorFromHEX:colorStr];
+            if (textColor) {
+                self.textColor = textColor;
             } else {
-                label.backgroundColor = [UIColor colorFromPlistWithKey:colorStr];
+                self.textColor = [UIColor colorFromPlistWithKey:colorStr];
             }
         }
-    }
-    
-    {
-        NSDictionary *borderDict = [labelDict objectForKey:@"Border"];
-        if (borderDict) {
-            {
-                NSString *colorStr = [borderDict objectForKey:@"Color"];
-                UIColor *borderColor = [UIColor colorFromHEX:colorStr];
-                if (borderColor) {
-                    label.layer.borderColor = borderColor.CGColor;
+        
+        {
+            NSString *colorStr = [parametersDict objectForKey:@"BackgroundColor"];
+            if ([colorStr isEmpty]) {
+                self.backgroundColor = [UIColor clearColor];
+            } else {
+                UIColor *backgroundColor = [UIColor colorFromHEX:colorStr];
+                if (backgroundColor) {
+                    self.backgroundColor = backgroundColor;
                 } else {
-                    label.layer.borderColor = [UIColor colorFromPlistWithKey:colorStr].CGColor;
+                    self.backgroundColor = [UIColor colorFromPlistWithKey:colorStr];
                 }
             }
-            label.layer.borderWidth = [[borderDict objectForKey:@"Width"] floatValue];
+        }
+        
+        {
+            NSDictionary *borderDict = [parametersDict objectForKey:@"Border"];
+            if (borderDict) {
+                {
+                    NSString *colorStr = [borderDict objectForKey:@"Color"];
+                    UIColor *borderColor = [UIColor colorFromHEX:colorStr];
+                    if (borderColor) {
+                        self.layer.borderColor = borderColor.CGColor;
+                    } else {
+                        self.layer.borderColor = [UIColor colorFromPlistWithKey:colorStr].CGColor;
+                    }
+                }
+                self.layer.borderWidth = [[borderDict objectForKey:@"Width"] floatValue];
+            }
+        }
+        
+        float cornerRadius = [[parametersDict objectForKey:@"CornerRadius"] floatValue];
+        if (cornerRadius > 0) {
+            self.layer.cornerRadius = cornerRadius;
         }
     }
-    
-    float cornerRadius = [[labelDict objectForKey:@"CornerRadius"] floatValue];
-    if (cornerRadius > 0) {
-        label.layer.cornerRadius = cornerRadius;
-    }
-    
-    return label;
+    return self;
 }
 
+- (instancetype)initWithAdaptText:(NSString *)text {
+    self = [super init];
+    if (self) {
+        self.text = text;
+        self.numberOfLines = 1;
+        [self sizeToFit];
+    }
+    return self;
+}
 @end

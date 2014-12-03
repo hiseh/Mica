@@ -16,7 +16,10 @@
 #import "UITextField+MCTextField.h"
 #import "UILabel+MCLabel.h"
 #import "UITextView+MCTextView.h"
+#import "UIView+MCView.h"
 
+#import "MCView.h"
+#import "MCListView.h"
 
 #define MC_PARAMETERS_FILE @"Parameters"
 
