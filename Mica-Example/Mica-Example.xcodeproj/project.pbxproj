@@ -15,7 +15,7 @@
 		3C4C0CF41A2C5D7500BC6CB1 /* MCLabelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C0CF31A2C5D7500BC6CB1 /* MCLabelTests.m */; };
 		3C7729CD1A2EC2BA00E5679D /* MCView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7729CC1A2EC2BA00E5679D /* MCView.m */; };
 		3C7729D01A2EC33400E5679D /* MCListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7729CF1A2EC33400E5679D /* MCListView.m */; };
-		3C7729D41A2ED52300E5679D /* PlistModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7729D31A2ED52300E5679D /* PlistModel.m */; };
+		3C7729D81A2ED5B100E5679D /* PlistModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7729D71A2ED5B100E5679D /* PlistModel.m */; };
 		3C9B48DE1A2D5FD000623E1A /* UITextField+MCTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9B48DD1A2D5FD000623E1A /* UITextField+MCTextField.m */; };
 		3C9B48E01A2D61F500623E1A /* MCTextFieldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9B48DF1A2D61F500623E1A /* MCTextFieldTests.m */; };
 		3C9B48E41A2D690300623E1A /* UITextView+MCTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9B48E31A2D690300623E1A /* UITextView+MCTextView.m */; };
@@ -59,8 +59,8 @@
 		3C7729CC1A2EC2BA00E5679D /* MCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCView.m; path = ../Mica/MCView.m; sourceTree = "<group>"; };
 		3C7729CE1A2EC33400E5679D /* MCListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCListView.h; path = ../Mica/MCListView.h; sourceTree = "<group>"; };
 		3C7729CF1A2EC33400E5679D /* MCListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCListView.m; path = ../Mica/MCListView.m; sourceTree = "<group>"; };
-		3C7729D21A2ED52300E5679D /* PlistModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistModel.h; sourceTree = "<group>"; };
-		3C7729D31A2ED52300E5679D /* PlistModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistModel.m; sourceTree = "<group>"; };
+		3C7729D61A2ED5B100E5679D /* PlistModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistModel.h; sourceTree = "<group>"; };
+		3C7729D71A2ED5B100E5679D /* PlistModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistModel.m; sourceTree = "<group>"; };
 		3C9B48DC1A2D5FD000623E1A /* UITextField+MCTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITextField+MCTextField.h"; path = "../Mica/UITextField+MCTextField.h"; sourceTree = "<group>"; };
 		3C9B48DD1A2D5FD000623E1A /* UITextField+MCTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITextField+MCTextField.m"; path = "../Mica/UITextField+MCTextField.m"; sourceTree = "<group>"; };
 		3C9B48DF1A2D61F500623E1A /* MCTextFieldTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCTextFieldTests.m; sourceTree = "<group>"; };
@@ -126,13 +126,14 @@
 			name = MCView;
 			sourceTree = "<group>";
 		};
-		3C7729D11A2ED52300E5679D /* PlistModel */ = {
+		3C7729D51A2ED5B100E5679D /* PlistModel */ = {
 			isa = PBXGroup;
 			children = (
-				3C7729D21A2ED52300E5679D /* PlistModel.h */,
-				3C7729D31A2ED52300E5679D /* PlistModel.m */,
+				3C7729D61A2ED5B100E5679D /* PlistModel.h */,
+				3C7729D71A2ED5B100E5679D /* PlistModel.m */,
 			);
-			path = PlistModel;
+			name = PlistModel;
+			path = ../ThirdPart/PlistModel;
 			sourceTree = "<group>";
 		};
 		3C9B48E51A2D6A7800623E1A /* Images */ = {
@@ -251,7 +252,7 @@
 		3CACD9C21A284DD7008220AB /* ThirdPart */ = {
 			isa = PBXGroup;
 			children = (
-				3C7729D11A2ED52300E5679D /* PlistModel */,
+				3C7729D51A2ED5B100E5679D /* PlistModel */,
 			);
 			name = ThirdPart;
 			sourceTree = "<group>";
@@ -358,7 +359,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C7729D41A2ED52300E5679D /* PlistModel.m in Sources */,
+				3C7729D81A2ED5B100E5679D /* PlistModel.m in Sources */,
 				3C9B48E41A2D690300623E1A /* UITextView+MCTextView.m in Sources */,
 				3C9DCCD91A25C133002C4A8B /* ViewController.m in Sources */,
 				3C9DCCD61A25C133002C4A8B /* AppDelegate.m in Sources */,
