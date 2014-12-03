@@ -64,8 +64,22 @@ return UIColor Object.
 <br />
 **Parameters**<br />
 `key`: The parameters file key value. It must be the subkey of Label.
-<br /><br />
-**Return Value**<br />
+<br />
+<br />
+
+- `FontSize` The points of label text's font size.
+- `Bold` If it is `YES`, the font of text will be rendered in boldface else standard face.
+- `TextColor` The font color of text. It shoud be HEX String or Color property.
+- `BackgroundColor` The background color of label. If it is empty, the background color will be `[UIColor clearColor]`
+- `Border`
+	* `Color` The color of label's border color. It shoud be HEX String or Color property.
+	* `Width` The width of label's border width.
+- `CornerRadius` The label's layer corner radius.
+
+<br />
+<br />
+**Return Value**
+<br />
 return UILabel Object.
 <br /><br />
 **Example**<br />
@@ -83,14 +97,16 @@ return UILabel Object.
 <br />
 <br />
 
-- `FontSize` The points of label text's font size.
+- `FontSize` The points of TextField text's font size.
 - `Bold` If it is `YES`, the font of text will be rendered in boldface else standard face.
 - `TextColor` The font color of text. It shoud be HEX String or Color property.
-- `BackgroundColor` The background color label. If it is empty, the background color will be `[UIColor clearColor]`
+- `BackgroundColor` The background color of TextField. If it is empty, the background color will be `[UIColor clearColor]`
 - `Border`
 	* `Color` The color of label's border color. It shoud be HEX String or Color property.
 	* `Width` The width of label's border width.
 - `CornerRadius` The label's layer corner radius.
+- `ShowClearButton` If it is `YES`, TextField will display clear button when UITextFieldViewModeWhileEditing.
+
 <br />
 <br />
 **Return Value**<br />
@@ -108,8 +124,24 @@ return UITextField Object.
 <br />
 **Parameters**<br />
 `key`: The parameters file key value. It must be the subkey of TextView.
-<br /><br />
-**Return Value**<br />
+<br />
+<br />
+
+- `FontSize` The points of text's font size.
+- `Bold` If it is `YES`, the font of text will be rendered in boldface else standard face.
+- `TextColor` The font color of text. It shoud be HEX String or Color property.
+- `BackgroundColor` The background color of TextView. If it is empty, the background color will be `[UIColor clearColor]`
+- `Border`
+	* `Color` The color of TextView's border color. It shoud be HEX String or Color property.
+	* `Width` The width of TextView's border width.
+- `CornerRadius` The TextView's layer corner radius.
+- `ShowClearButton` If it is `YES`, TextView will display clear button.
+- `ScrollEnabled` If it is `YES`, TextView will enable scrolling.
+
+<br />
+<br />
+**Return Value**
+<br />
 return UITextView Object.
 <br /><br />
 **Example**<br />
