@@ -49,5 +49,12 @@
 }
 
 - (void)listView:(UIView *)listView didSelectRow:(NSInteger)row {
+    NSLog(@"selected row is %d", row);
 }
+
+- (void)listViewDidEndEditing:(UIView *)listView {
+    
+}
+
+
 @end
