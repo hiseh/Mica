@@ -28,6 +28,30 @@
     return self;
 }
 
+- (void)stopPullAction {
+    switch (__pullActionType) {
+        case MCListViewPullActionLoadMore:
+        {
+            [__tableView.infiniteScrollingView stopAnimating];
+            break;
+        }
+        case MCListViewPullActionRefresh:
+        {
+            [__tableView.pullToRefreshView stopAnimating];
+            break;
+        }
+        case MCListViewPullActionRefreshAndLoadMore:
+        {
+            [__tableView.pullToRefreshView stopAnimating];
+            [__tableView.infiniteScrollingView stopAnimating];
+            break;
+        }
+        case MCListViewPullActionNone:
+        default:
+            break;
+    }
+}
+
 #pragma mark - 初始化table view
 - (void)initTableView:(CGRect)frame
 {
@@ -53,7 +77,7 @@
             {
                 [__tableView addInfiniteScrollingWithActionHandler:^{
                     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-                        [weakSelf.delegate MCListViewWillLoadMore];
+                        [weakSelf.delegate listViewShouldBeginLoadMore:weakSelf];
                     });
                 }];
                 break;
@@ -61,7 +85,7 @@
             case MCListViewPullActionRefresh:
             {
                 [__tableView addPullToRefreshWithActionHandler:^{
-                    [weakSelf.delegate MCListViewWillRefresh];
+                    [weakSelf.delegate listViewShouldBeginRefresh:weakSelf];
                 }];
                 break;
             }
@@ -69,11 +93,11 @@
             {
                 [__tableView addInfiniteScrollingWithActionHandler:^{
                     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-                        [weakSelf.delegate MCListViewWillLoadMore];
+                        [weakSelf.delegate listViewShouldBeginLoadMore:weakSelf];
                     });
                 }];
                 [__tableView addPullToRefreshWithActionHandler:^{
-                    [weakSelf.delegate MCListViewWillRefresh];
+                    [weakSelf.delegate listViewShouldBeginRefresh:weakSelf];
                 }];
                 break;
             }
@@ -112,7 +136,7 @@
     [__tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
                        withRowAnimation:UITableViewRowAnimationAutomatic];
     
-    [self.delegate MCListViewDidEdit];
+    [self.delegate listViewDidEndEditing:self];
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -135,7 +159,7 @@
     [__dataSource removeObjectAtIndex:fromRow];
     [__dataSource insertObject:object atIndex:toRow];
     
-    [self.delegate MCListViewDidEdit];
+    [self.delegate listViewDidEndEditing:self];
 }
 
 #pragma mark -
@@ -181,7 +205,7 @@
         }
     }
     
-    [self.delegate MCListViewDidSelectRow:indexPath.row];
+    [self.delegate listView:self didSelectRow:indexPath.row];
 }
 
 #pragma mark - load more & refresh
@@ -190,7 +214,6 @@
     [__dataSource addObjectsFromArray:objects];
     [__tableView reloadData];
     
-    [__tableView.infiniteScrollingView stopAnimating];
 }
 
 - (void)refreshWithObjects:(NSArray *)objects
@@ -198,7 +221,6 @@
     [__dataSource removeAllObjects];
     [__dataSource addObjectsFromArray:objects];
     [__tableView reloadData];
-    [__tableView.pullToRefreshView stopAnimating];
 }
 
 #pragma mark - 改变 UI

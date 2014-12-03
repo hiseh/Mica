@@ -21,15 +21,11 @@
             case MCShapeRect:
             {
                 //矩形
-                self.layer.borderColor = borderColor.CGColor;
-                self.layer.borderWidth = 1.0f;
                 break;
             }
             case MCShapeRectWithLargeCorner:
             {
                 //大圆角矩形
-                self.layer.borderColor = borderColor.CGColor;
-                self.layer.borderWidth = 1.0f;
                 self.layer.cornerRadius = [[parametersDict objectForKey:@"LargeCorner"] floatValue];
                 self.layer.masksToBounds = YES;
                 break;
@@ -37,8 +33,6 @@
             case MCShapeRectWithMiddleCorner:
             {
                 //中圆角矩形
-                self.layer.borderColor = borderColor.CGColor;
-                self.layer.borderWidth = 1.0f;
                 self.layer.cornerRadius = [[parametersDict objectForKey:@"MiddleCorner"] floatValue];
                 self.layer.masksToBounds = YES;
                 break;
@@ -46,8 +40,6 @@
             case MCShapeRectWithLittleCorner:
             {
                 //小圆角矩形
-                self.layer.borderColor = borderColor.CGColor;
-                self.layer.borderWidth = 1.0f;
                 self.layer.cornerRadius = [[parametersDict objectForKey:@"LittleCorner"] floatValue];
                 self.layer.masksToBounds = YES;
                 break;
@@ -59,12 +51,14 @@
                 self.layer.masksToBounds = YES;
                 self.layer.cornerRadius = diameter / 2;
                 self.layer.bounds = CGRectMake(0, 0, diameter, diameter);
-                self.layer.borderWidth = 1.0f;
-                self.layer.borderColor = borderColor.CGColor;
                 break;
             }
             default:
                 break;
+        }
+        if (borderColor) {
+            self.layer.borderColor = borderColor.CGColor;
+            self.layer.borderWidth = 1.0f;
         }
         
         CAGradientLayer *gradientLayer = [CAGradientLayer layer];
@@ -127,7 +121,7 @@
 }
 
 - (instancetype)initWithLoadMoreIndicator {
-    self = [super init];
+    self = [self init];
     if (self) {
         UILabel *moreLabel = [[UILabel alloc] initWithAdaptText:@"加载更多"];
         moreLabel.center = self.center;
@@ -141,7 +135,7 @@
 }
 
 - (instancetype)initWithLoadingIndicator {
-    self = [super init];
+    self = [self init];
     if (self) {
         UIActivityIndicatorView *activityIndicatorView = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
         activityIndicatorView.center = CGPointMake(self.center.x - 20, self.center.y);

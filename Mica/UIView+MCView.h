@@ -73,7 +73,6 @@ typedef enum {
  The most light color of the UIView.
  @param darkColor
  The most dark color of the UIView.
- @return nil
  */
 - (void)initLine:(CGRect)frame lightColor:(UIColor *)lightColor darkColor:(UIColor *)darkColor;
 

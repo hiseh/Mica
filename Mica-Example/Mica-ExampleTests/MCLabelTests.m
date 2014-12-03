@@ -29,12 +29,12 @@
 
 - (void)test_labelFromPlistWithKey {
     {
-        UILabel *a = [UILabel labelFromPlistWithKey:@"Title"];
+        UILabel *a = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 20) parameterKey:@"Title"];
         XCTAssertTrue([a isKindOfClass:[UILabel class]]);
     }
     
     {
-        UILabel *b = [UILabel labelFromPlistWithKey:@"Body"];
+        UILabel *b = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 20) parameterKey:@"Body"];
         XCTAssertTrue([b isKindOfClass:[UILabel class]]);
     }
 }

@@ -14,13 +14,13 @@ typedef enum {
     MCListViewPullActionRefreshAndLoadMore
 } MCListViewPullActionType;
 
+@class MCListView;
 @protocol MCListViewDelegate <NSObject>
-
 @optional
-- (void)MCListViewWillLoadMore;
-- (void)MCListViewWillRefresh;
-- (void)MCListViewDidSelectRow:(NSInteger)row;
-- (void)MCListViewDidEdit;
+- (void)listViewShouldBeginLoadMore:(MCListView *)listView;
+- (void)listViewShouldBeginRefresh:(MCListView *)listView;
+- (void)listView:(UIView *)listView didSelectRow:(NSInteger)row;
+- (void)listViewDidEndEditing:(UIView *)listView;
 
 @end
 
@@ -52,6 +52,11 @@ typedef enum {
  @return UIView
  */
 - (instancetype)initWithFrame:(CGRect)frame pullActionType:(MCListViewPullActionType)pullActionType dataSource:(NSArray *)dataSource;
+
+/**
+ Stop refresh indicator and load more indicator.
+ */
+- (void)stopPullAction;
 
 - (void)appendObjects:(NSArray *)objects;
 - (void)refreshWithObjects:(NSArray *)objects;
