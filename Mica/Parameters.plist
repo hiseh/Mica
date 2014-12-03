@@ -4,6 +4,8 @@
 <dict>
 	<key>Color</key>
 	<dict>
+		<key>DarKSeparatorColor</key>
+		<string>cccccc</string>
 		<key>PinkColor</key>
 		<string>d90070</string>
 		<key>BodyTextColor</key>

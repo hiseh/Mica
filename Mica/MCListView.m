@@ -46,10 +46,10 @@
     __tableView.bouncesZoom = NO;
     [self addSubview:__tableView];
     
-    if (__pullActionType != PullActionNone) {
+    if (__pullActionType != MCListViewPullActionNone) {
         __weak MCListView *weakSelf = self;
         switch (__pullActionType) {
-            case PullActionLoadMore:
+            case MCListViewPullActionLoadMore:
             {
                 [__tableView addInfiniteScrollingWithActionHandler:^{
                     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -58,14 +58,14 @@
                 }];
                 break;
             }
-            case PullActionRefresh:
+            case MCListViewPullActionRefresh:
             {
                 [__tableView addPullToRefreshWithActionHandler:^{
                     [weakSelf.delegate MCListViewWillRefresh];
                 }];
                 break;
             }
-            case PullActionRefreshAndLoadMore:
+            case MCListViewPullActionRefreshAndLoadMore:
             {
                 [__tableView addInfiniteScrollingWithActionHandler:^{
                     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -77,7 +77,8 @@
                 }];
                 break;
             }
-            case PullActionNone:
+            case MCListViewPullActionNone:
+            default:
                 break;
         }
         
@@ -111,7 +112,7 @@
     [__tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
                        withRowAnimation:UITableViewRowAnimationAutomatic];
     
-    [self.delegate iDouKouListViewDidEdit];
+    [self.delegate MCListViewDidEdit];
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -134,7 +135,7 @@
     [__dataSource removeObjectAtIndex:fromRow];
     [__dataSource insertObject:object atIndex:toRow];
     
-    [self.delegate iDouKouListViewDidEdit];
+    [self.delegate MCListViewDidEdit];
 }
 
 #pragma mark -
@@ -150,28 +151,9 @@
     
     cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                   reuseIdentifier:CellIdentifier];
-    if ([[MCSystem getSystemVersion] integerValue] < 7) {
-        if (cell == nil) {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                          reuseIdentifier:CellIdentifier];
-        } else {
-            for(UIView *subview in cell.subviews){
-                [subview removeFromSuperview];
-            }
-        }
-    } else {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                      reuseIdentifier:CellIdentifier];
-    }
     
     UIView *elementView = [__dataSource objectAtIndex:indexPath.row];
     [cell addSubview:elementView];
-    [cell initLine:CGRectMake(0,
-                              elementView.frame.size.height,
-                              cell.frame.size.width,
-                              0.5)
-         darkColor:[UIColor darKSeparatorColor]
-        lightColor:[UIColor whiteColor]];
     
     return cell;
 }
@@ -199,7 +181,7 @@
         }
     }
     
-    [self.delegate iDouKouListViewDidSelectRow:indexPath.row];
+    [self.delegate MCListViewDidSelectRow:indexPath.row];
 }
 
 #pragma mark - load more & refresh
