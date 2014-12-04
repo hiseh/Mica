@@ -11,15 +11,14 @@
 
 @implementation MCListView
 @synthesize delegate;
-@synthesize isEdit = __isEdit;
-@synthesize canMulitpleSelect = __canMulitpleSelect;
+@synthesize mulitpleChoice = __canMulitpleSelect;
 
-- (instancetype)initWithFrame:(CGRect)frame pullActionType:(MCListViewPullActionType)pullActionType dataSource:(NSArray *)dataSource
-{
+#pragma mark - public method
+- (instancetype)initWithFrame:(CGRect)frame pullActionType:(MCListViewPullActionType)pullActionType dataSource:(NSArray *)dataSource {
     self = [super initWithFrame:frame];
     if (self) {
         __dataSource = [NSMutableArray arrayWithArray:dataSource];
-        __isEdit = NO;
+        __editing = NO;
         __canMulitpleSelect = NO;
         __pullActionType = pullActionType;
         
@@ -52,9 +51,59 @@
     }
 }
 
+#pragma mark load more & refresh
+- (void)appendObjects:(NSArray *)objects {
+    if (objects && [objects count] > 0) {
+        [__dataSource addObjectsFromArray:objects];
+        [__tableView reloadData];
+    }
+    
+}
+
+- (void)refreshWithObjects:(NSArray *)objects {
+    if (objects) {
+        [__dataSource removeAllObjects];
+        [__dataSource addObjectsFromArray:objects];
+        [__tableView reloadData];
+    }
+}
+
+#pragma mark 改变 UI
+- (void)resizeWithFrame:(CGRect)frame {
+    self.frame = frame;
+    __tableView.frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
+}
+
+- (void)scrollToIndex:(NSInteger)index {
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:__dataSource.count - 1 inSection:0];
+    
+    if (__dataSource.count > 0) {
+        [__tableView scrollToRowAtIndexPath:indexPath
+                           atScrollPosition:UITableViewScrollPositionMiddle
+                                   animated:YES];
+    }
+}
+
+- (void)scrollToBottom {
+    NSInteger index = __dataSource.count - 1;
+    [self scrollToIndex:index];
+}
+
+
+- (void)setEditing:(BOOL)editing {
+    if ( editing) {
+        [__tableView setEditing:YES animated:YES];
+        __editing = YES;
+    } else {
+        [__tableView setEditing:NO animated:YES];
+        __editing = NO;
+    }
+    
+    [__tableView reloadData];
+}
+
 #pragma mark - 初始化table view
-- (void)initTableView:(CGRect)frame
-{
+- (void)initTableView:(CGRect)frame {
     __tableView = [[UITableView alloc] initWithFrame:CGRectMake(0,
                                                                 0,
                                                                 frame.size.width,
@@ -111,19 +160,6 @@
     }
 }
 
-#pragma mark UITableViewDelegate and UITableViewDatasource methods
-- (void)setEditable:(BOOL)editable
-{
-    if (! editable) {
-        [__tableView setEditing:NO animated:YES];
-        __isEdit = NO;
-    } else {
-        [__tableView setEditing:YES animated:YES];
-        __isEdit = YES;
-    }
-    
-    [__tableView reloadData];
-}
 #pragma mark - 删除
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -141,13 +177,13 @@
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return __isEdit;
+    return __editing;
 }
 
-#pragma mark - 移动
+#pragma mark 移动
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return __isEdit;
+    return __editing;
 }
 
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath
@@ -206,44 +242,6 @@
     }
     
     [self.delegate listView:self didSelectRow:indexPath.row];
-}
-
-#pragma mark - load more & refresh
-- (void)appendObjects:(NSArray *)objects
-{
-    [__dataSource addObjectsFromArray:objects];
-    [__tableView reloadData];
-    
-}
-
-- (void)refreshWithObjects:(NSArray *)objects
-{
-    [__dataSource removeAllObjects];
-    [__dataSource addObjectsFromArray:objects];
-    [__tableView reloadData];
-}
-
-#pragma mark - 改变 UI
-- (void)resize:(CGSize)frame
-{
-    __tableView.frame = CGRectMake(0, 0, frame.width, frame.height);
-}
-
-- (void)scrollToIndex:(NSInteger)index
-{
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:__dataSource.count - 1 inSection:0];
-    
-    if (__dataSource.count > 0) {
-        [__tableView scrollToRowAtIndexPath:indexPath
-                           atScrollPosition:UITableViewScrollPositionMiddle
-                                   animated:YES];
-    }
-}
-
-- (void)scrollToBottom
-{
-    NSInteger index = __dataSource.count - 1;
-    [self scrollToIndex:index];
 }
 
 @end

@@ -17,9 +17,34 @@ typedef enum {
 @class MCListView;
 @protocol MCListViewDelegate <NSObject>
 @optional
+/**
+ Asks the delegate if view should show load more indicator.
+ @param listView
+ The current view.
+ */
 - (void)listViewShouldBeginLoadMore:(MCListView *)listView;
+
+/**
+ Asks the delegate if view should show refresh indicator.
+ @param listView
+ The current view.
+ */
 - (void)listViewShouldBeginRefresh:(MCListView *)listView;
+
+/**
+ Tells the delegate that the specified row is now selected.
+ @param listView
+ The current view.
+ @param row
+ The row num locating the new selected row.
+ */
 - (void)listView:(UIView *)listView didSelectRow:(NSInteger)row;
+
+/**
+ Tells the delegate if view did end editing mode.
+ @param listView
+ The current view.
+ */
 - (void)listViewDidEndEditing:(UIView *)listView;
 
 @end
@@ -28,14 +53,17 @@ typedef enum {
 @private
     NSMutableArray  *__dataSource;
     UITableView     *__tableView;
-    BOOL            __isEdit;
+    BOOL            __editing;
     BOOL            __canMulitpleSelect;
     MCListViewPullActionType __pullActionType;
 }
 
 @property (nonatomic, weak) id<MCListViewDelegate> delegate;
-@property (nonatomic, assign) BOOL isEdit;
-@property (nonatomic, assign) BOOL canMulitpleSelect;
+
+/**
+ Enables the table list can be mulitple choice;
+ */
+@property (nonatomic, assign) BOOL mulitpleChoice;
 
 /**
  Create a base table list view.
@@ -58,11 +86,44 @@ typedef enum {
  */
 - (void)stopPullAction;
 
+/**
+ Add the objects contained in another given array to the end of the table list.
+ @param objects
+ An array of objects to add to the end of the table list.
+ */
 - (void)appendObjects:(NSArray *)objects;
+
+/**
+ Refresh the table list.
+ @param objects
+ The new data source.
+ */
 - (void)refreshWithObjects:(NSArray *)objects;
-- (void)setEditable:(BOOL)editable;
-- (void)resize:(CGSize)frame;
-- (void)scrollToBottom;
+
+/**
+ Resize the view frame.
+ @param frame
+ The new Rect frame of the view.
+ */
+- (void)resizeWithFrame:(CGRect)frame;
+
+/**
+ Scrolls the receiver until a row identified by index is at a middle of the view.
+ @param index
+ The aim index of the row.
+ */
 - (void)scrollToIndex:(NSInteger)index;
+
+/**
+ Scrolls the receiver until the last row is at middle of the view.
+ */
+- (void)scrollToBottom;
+
+/**
+ Toggles the receiver into and out of editing mode.
+ @param editing
+ YES to enter editing mode, NO to leave it. The default value is NO .
+ */
+- (void)setEditing:(BOOL)editing;
 
 @end
