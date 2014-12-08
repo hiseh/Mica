@@ -13,6 +13,7 @@
 		3C350B741A276B5A00979958 /* NSNumber+MCNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C350B731A276B5A00979958 /* NSNumber+MCNumber.m */; };
 		3C4C0CF21A2C531A00BC6CB1 /* UILabel+MCLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C0CF11A2C531A00BC6CB1 /* UILabel+MCLabel.m */; };
 		3C4C0CF41A2C5D7500BC6CB1 /* MCLabelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C0CF31A2C5D7500BC6CB1 /* MCLabelTests.m */; };
+		3C54CC751A3037B000D20588 /* MCGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C54CC741A3037B000D20588 /* MCGridView.m */; };
 		3C7729CD1A2EC2BA00E5679D /* MCView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7729CC1A2EC2BA00E5679D /* MCView.m */; };
 		3C7729D01A2EC33400E5679D /* MCListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7729CF1A2EC33400E5679D /* MCListView.m */; };
 		3C9B48DE1A2D5FD000623E1A /* UITextField+MCTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9B48DD1A2D5FD000623E1A /* UITextField+MCTextField.m */; };
@@ -58,6 +59,8 @@
 		3C4C0CF01A2C531A00BC6CB1 /* UILabel+MCLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+MCLabel.h"; path = "../Mica/UILabel+MCLabel.h"; sourceTree = "<group>"; };
 		3C4C0CF11A2C531A00BC6CB1 /* UILabel+MCLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UILabel+MCLabel.m"; path = "../Mica/UILabel+MCLabel.m"; sourceTree = "<group>"; };
 		3C4C0CF31A2C5D7500BC6CB1 /* MCLabelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCLabelTests.m; sourceTree = "<group>"; };
+		3C54CC731A3037B000D20588 /* MCGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCGridView.h; path = ../Mica/MCGridView.h; sourceTree = "<group>"; };
+		3C54CC741A3037B000D20588 /* MCGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCGridView.m; path = ../Mica/MCGridView.m; sourceTree = "<group>"; };
 		3C7729CB1A2EC2BA00E5679D /* MCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCView.h; path = ../Mica/MCView.h; sourceTree = "<group>"; };
 		3C7729CC1A2EC2BA00E5679D /* MCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCView.m; path = ../Mica/MCView.m; sourceTree = "<group>"; };
 		3C7729CE1A2EC33400E5679D /* MCListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCListView.h; path = ../Mica/MCListView.h; sourceTree = "<group>"; };
@@ -275,6 +278,8 @@
 		3CD95DFA1A2EECA60041F343 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3C54CC731A3037B000D20588 /* MCGridView.h */,
+				3C54CC741A3037B000D20588 /* MCGridView.m */,
 				3C7729CE1A2EC33400E5679D /* MCListView.h */,
 				3C7729CF1A2EC33400E5679D /* MCListView.m */,
 				3C7729CB1A2EC2BA00E5679D /* MCView.h */,
@@ -393,6 +398,7 @@
 				3C350B741A276B5A00979958 /* NSNumber+MCNumber.m in Sources */,
 				3C9DCCD31A25C133002C4A8B /* main.m in Sources */,
 				3C7729D01A2EC33400E5679D /* MCListView.m in Sources */,
+				3C54CC751A3037B000D20588 /* MCGridView.m in Sources */,
 				3C4C0CF21A2C531A00BC6CB1 /* UILabel+MCLabel.m in Sources */,
 				3C09FFC21A2708DA0081600E /* NSString+MCString.m in Sources */,
 				3C09FFBF1A26FD4C0081600E /* UIColor+MCColor.m in Sources */,

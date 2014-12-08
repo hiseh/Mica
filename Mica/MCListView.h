@@ -51,11 +51,11 @@ typedef enum {
 
 @interface MCListView : MCView <UITableViewDataSource, UITableViewDelegate> {
 @private
-    NSMutableArray  *__dataSource;
-    UITableView     *__tableView;
-    BOOL            __editing;
-    BOOL            __canMulitpleSelect;
-    MCListViewPullActionType __pullActionType;
+    NSMutableArray  *dataSource__;
+    UITableView     *tableView__;
+    BOOL            editing__;
+    BOOL            canMulitpleSelect__;
+    MCListViewPullActionType pullActionType__;
 }
 
 @property (nonatomic, weak) id<MCListViewDelegate> delegate;
@@ -127,3 +127,5 @@ typedef enum {
 - (void)setEditing:(BOOL)editing;
 
 @end
+
+extern NSUInteger const LIST_ELEMENT_TAG;

@@ -22,6 +22,7 @@
 
     #import "MCView.h"
     #import "MCListView.h"
+    #import "MCGridView.h"
 
 #define MC_PARAMETERS_FILE @"Parameters"
 

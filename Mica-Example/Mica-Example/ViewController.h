@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController <MCListViewDelegate>
+@interface ViewController : UIViewController <MCGridViewDelegate>
 
 
 @end
