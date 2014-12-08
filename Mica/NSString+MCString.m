@@ -58,6 +58,9 @@ NSString * const PATTERN_HTML = @"<[^>]*>|\n";  //HTML标记
                               options:NSLiteralSearch
                                 range:NSMakeRange(rangBegin.location + rangBegin.length,
                                                   self.length - rangBegin.location - rangBegin.length)];
+        if (rangEnd.location == NSNotFound) {
+            return @"";
+        }
     } else {
         rangEnd = NSMakeRange([self length], 0);
     }
@@ -88,11 +91,11 @@ NSString * const PATTERN_HTML = @"<[^>]*>|\n";  //HTML标记
 }
 
 #pragma mark -
-+ (NSString *)randomString:(NSUInteger)width randomStringType:(RandomStringType)randomStringType {
-    NSMutableString *result = [[NSMutableString alloc] initWithCapacity:width];
++ (NSString *)randomString:(NSUInteger)length randomStringType:(RandomStringType)randomStringType {
+    NSMutableString *result = [[NSMutableString alloc] initWithCapacity:length];
     switch (randomStringType) {
         case OnlyAlphabet:
-            for (int i = 0; i < width; i ++) {
+            for (int i = 0; i < length; i ++) {
                 char tempC = [NSNumber random:26] + 97;
                 [result appendFormat:@"%c", tempC];
             }
