@@ -13,6 +13,7 @@
 		3C1A26271A35F27700BE1C1F /* NSString+MCRegular.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A26261A35F27700BE1C1F /* NSString+MCRegular.m */; };
 		3C350B741A276B5A00979958 /* NSNumber+MCNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C350B731A276B5A00979958 /* NSNumber+MCNumber.m */; };
 		3C3E89201A36A9B10030B3E6 /* MCRegularTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C3E891F1A36A9B10030B3E6 /* MCRegularTests.m */; };
+		3C3E89231A36CC7D0030B3E6 /* NSString+MCEmoji.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C3E89221A36CC7D0030B3E6 /* NSString+MCEmoji.m */; };
 		3C4C0CF21A2C531A00BC6CB1 /* UILabel+MCLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C0CF11A2C531A00BC6CB1 /* UILabel+MCLabel.m */; };
 		3C4C0CF41A2C5D7500BC6CB1 /* MCLabelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C0CF31A2C5D7500BC6CB1 /* MCLabelTests.m */; };
 		3C54CC751A3037B000D20588 /* MCGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C54CC741A3037B000D20588 /* MCGridView.m */; };
@@ -62,6 +63,8 @@
 		3C350B751A276C8800979958 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		3C3E891E1A369DDD0030B3E6 /* emojis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = emojis.h; sourceTree = "<group>"; };
 		3C3E891F1A36A9B10030B3E6 /* MCRegularTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCRegularTests.m; sourceTree = "<group>"; };
+		3C3E89211A36CC7D0030B3E6 /* NSString+MCEmoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+MCEmoji.h"; path = "../Mica/NSString+MCEmoji.h"; sourceTree = "<group>"; };
+		3C3E89221A36CC7D0030B3E6 /* NSString+MCEmoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+MCEmoji.m"; path = "../Mica/NSString+MCEmoji.m"; sourceTree = "<group>"; };
 		3C4C0CF01A2C531A00BC6CB1 /* UILabel+MCLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+MCLabel.h"; path = "../Mica/UILabel+MCLabel.h"; sourceTree = "<group>"; };
 		3C4C0CF11A2C531A00BC6CB1 /* UILabel+MCLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UILabel+MCLabel.m"; path = "../Mica/UILabel+MCLabel.m"; sourceTree = "<group>"; };
 		3C4C0CF31A2C5D7500BC6CB1 /* MCLabelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCLabelTests.m; sourceTree = "<group>"; };
@@ -156,10 +159,12 @@
 				3C3E891E1A369DDD0030B3E6 /* emojis.h */,
 				3C350B721A276B5A00979958 /* NSNumber+MCNumber.h */,
 				3C350B731A276B5A00979958 /* NSNumber+MCNumber.m */,
-				3C09FFC01A2708DA0081600E /* NSString+MCString.h */,
-				3C09FFC11A2708DA0081600E /* NSString+MCString.m */,
+				3C3E89211A36CC7D0030B3E6 /* NSString+MCEmoji.h */,
+				3C3E89221A36CC7D0030B3E6 /* NSString+MCEmoji.m */,
 				3C1A26251A35F27700BE1C1F /* NSString+MCRegular.h */,
 				3C1A26261A35F27700BE1C1F /* NSString+MCRegular.m */,
+				3C09FFC01A2708DA0081600E /* NSString+MCString.h */,
+				3C09FFC11A2708DA0081600E /* NSString+MCString.m */,
 			);
 			name = MCUtilities;
 			sourceTree = "<group>";
@@ -416,6 +421,7 @@
 				3C350B741A276B5A00979958 /* NSNumber+MCNumber.m in Sources */,
 				3C9DCCD31A25C133002C4A8B /* main.m in Sources */,
 				3C7729D01A2EC33400E5679D /* MCListView.m in Sources */,
+				3C3E89231A36CC7D0030B3E6 /* NSString+MCEmoji.m in Sources */,
 				3C1A26271A35F27700BE1C1F /* NSString+MCRegular.m in Sources */,
 				3C54CC751A3037B000D20588 /* MCGridView.m in Sources */,
 				3C4C0CF21A2C531A00BC6CB1 /* UILabel+MCLabel.m in Sources */,
