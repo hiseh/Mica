@@ -10,7 +10,9 @@
 		3C09FFBC1A26C5030081600E /* Parameters.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C09FFBB1A26C5030081600E /* Parameters.plist */; };
 		3C09FFBF1A26FD4C0081600E /* UIColor+MCColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C09FFBE1A26FD4C0081600E /* UIColor+MCColor.m */; };
 		3C09FFC21A2708DA0081600E /* NSString+MCString.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C09FFC11A2708DA0081600E /* NSString+MCString.m */; };
+		3C1A26271A35F27700BE1C1F /* NSString+MCRegular.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A26261A35F27700BE1C1F /* NSString+MCRegular.m */; };
 		3C350B741A276B5A00979958 /* NSNumber+MCNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C350B731A276B5A00979958 /* NSNumber+MCNumber.m */; };
+		3C3E89201A36A9B10030B3E6 /* MCRegularTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C3E891F1A36A9B10030B3E6 /* MCRegularTests.m */; };
 		3C4C0CF21A2C531A00BC6CB1 /* UILabel+MCLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C0CF11A2C531A00BC6CB1 /* UILabel+MCLabel.m */; };
 		3C4C0CF41A2C5D7500BC6CB1 /* MCLabelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C0CF31A2C5D7500BC6CB1 /* MCLabelTests.m */; };
 		3C54CC751A3037B000D20588 /* MCGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C54CC741A3037B000D20588 /* MCGridView.m */; };
@@ -53,9 +55,13 @@
 		3C09FFBE1A26FD4C0081600E /* UIColor+MCColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+MCColor.m"; path = "../Mica/UIColor+MCColor.m"; sourceTree = "<group>"; };
 		3C09FFC01A2708DA0081600E /* NSString+MCString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+MCString.h"; path = "../Mica/NSString+MCString.h"; sourceTree = "<group>"; };
 		3C09FFC11A2708DA0081600E /* NSString+MCString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+MCString.m"; path = "../Mica/NSString+MCString.m"; sourceTree = "<group>"; };
+		3C1A26251A35F27700BE1C1F /* NSString+MCRegular.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+MCRegular.h"; path = "../Mica/NSString+MCRegular.h"; sourceTree = "<group>"; };
+		3C1A26261A35F27700BE1C1F /* NSString+MCRegular.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+MCRegular.m"; path = "../Mica/NSString+MCRegular.m"; sourceTree = "<group>"; };
 		3C350B721A276B5A00979958 /* NSNumber+MCNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber+MCNumber.h"; path = "../Mica/NSNumber+MCNumber.h"; sourceTree = "<group>"; };
 		3C350B731A276B5A00979958 /* NSNumber+MCNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+MCNumber.m"; path = "../Mica/NSNumber+MCNumber.m"; sourceTree = "<group>"; };
 		3C350B751A276C8800979958 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		3C3E891E1A369DDD0030B3E6 /* emojis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = emojis.h; sourceTree = "<group>"; };
+		3C3E891F1A36A9B10030B3E6 /* MCRegularTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCRegularTests.m; sourceTree = "<group>"; };
 		3C4C0CF01A2C531A00BC6CB1 /* UILabel+MCLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+MCLabel.h"; path = "../Mica/UILabel+MCLabel.h"; sourceTree = "<group>"; };
 		3C4C0CF11A2C531A00BC6CB1 /* UILabel+MCLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UILabel+MCLabel.m"; path = "../Mica/UILabel+MCLabel.m"; sourceTree = "<group>"; };
 		3C4C0CF31A2C5D7500BC6CB1 /* MCLabelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCLabelTests.m; sourceTree = "<group>"; };
@@ -121,11 +127,19 @@
 		3C09FFBA1A26C4A40081600E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3C3E891C1A368D300030B3E6 /* Encrypt */,
 				3CD95DFA1A2EECA60041F343 /* View */,
 				3C9B48EB1A2D870100623E1A /* MCUI */,
 				3C9B48EA1A2D86E100623E1A /* MCUtilities */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		3C3E891C1A368D300030B3E6 /* Encrypt */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Encrypt;
 			sourceTree = "<group>";
 		};
 		3C9B48E51A2D6A7800623E1A /* Images */ = {
@@ -139,10 +153,13 @@
 		3C9B48EA1A2D86E100623E1A /* MCUtilities */ = {
 			isa = PBXGroup;
 			children = (
+				3C3E891E1A369DDD0030B3E6 /* emojis.h */,
 				3C350B721A276B5A00979958 /* NSNumber+MCNumber.h */,
 				3C350B731A276B5A00979958 /* NSNumber+MCNumber.m */,
 				3C09FFC01A2708DA0081600E /* NSString+MCString.h */,
 				3C09FFC11A2708DA0081600E /* NSString+MCString.m */,
+				3C1A26251A35F27700BE1C1F /* NSString+MCRegular.h */,
+				3C1A26261A35F27700BE1C1F /* NSString+MCRegular.m */,
 			);
 			name = MCUtilities;
 			sourceTree = "<group>";
@@ -215,6 +232,7 @@
 				3CACD9C01A2849AC008220AB /* MCColorTests.m */,
 				3C4C0CF31A2C5D7500BC6CB1 /* MCLabelTests.m */,
 				3CACD9BE1A28208C008220AB /* MCNumberTests.m */,
+				3C3E891F1A36A9B10030B3E6 /* MCRegularTests.m */,
 				3CACD9BC1A280F18008220AB /* MCStringTests.m */,
 				3C9B48DF1A2D61F500623E1A /* MCTextFieldTests.m */,
 				3C9B48E81A2D6AF300623E1A /* MCTextViewTests.m */,
@@ -398,6 +416,7 @@
 				3C350B741A276B5A00979958 /* NSNumber+MCNumber.m in Sources */,
 				3C9DCCD31A25C133002C4A8B /* main.m in Sources */,
 				3C7729D01A2EC33400E5679D /* MCListView.m in Sources */,
+				3C1A26271A35F27700BE1C1F /* NSString+MCRegular.m in Sources */,
 				3C54CC751A3037B000D20588 /* MCGridView.m in Sources */,
 				3C4C0CF21A2C531A00BC6CB1 /* UILabel+MCLabel.m in Sources */,
 				3C09FFC21A2708DA0081600E /* NSString+MCString.m in Sources */,
@@ -413,6 +432,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C3E89201A36A9B10030B3E6 /* MCRegularTests.m in Sources */,
 				3CACD9BD1A280F18008220AB /* MCStringTests.m in Sources */,
 				3C9B48E01A2D61F500623E1A /* MCTextFieldTests.m in Sources */,
 				3C9B48E91A2D6AF300623E1A /* MCTextViewTests.m in Sources */,

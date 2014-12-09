@@ -40,11 +40,6 @@ typedef enum {
 - (NSString *)substringBetween:(NSString *)beginStr endStr:(NSString *)endStr;
 
 /**
- Returns a new string object that has be cleared HTML tags.
- */
-- (NSString *)stringByClearHTML;
-
-/**
  Returns a new string object containing the random characters.
  @param length The return string's length.
  @param randomStringType random type.

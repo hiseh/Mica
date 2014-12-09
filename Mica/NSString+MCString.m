@@ -6,7 +6,6 @@
 //  Copyright (c) 2014年 hiseh. All rights reserved.
 //
 
-NSString * const PATTERN_HTML = @"<[^>]*>|\n";  //HTML标记
 
 #import "NSString+MCString.h"
 
@@ -66,28 +65,6 @@ NSString * const PATTERN_HTML = @"<[^>]*>|\n";  //HTML标记
     }
     return [self substringWithRange:NSMakeRange(rangBegin.location + rangBegin.length,
                                                 rangEnd.location - rangBegin.location - rangBegin.length)];
-}
-
-- (NSString *)stringByClearHTML
-{
-    NSString *text = self;
-    NSRegularExpression *regularExpretion = [NSRegularExpression regularExpressionWithPattern:PATTERN_HTML
-                                                                                      options:0
-                                                                                        error:nil];
-    
-    text = [regularExpretion stringByReplacingMatchesInString:text
-                                                      options:NSMatchingReportProgress
-                                                        range:NSMakeRange(0, [text length])
-                                                 withTemplate:@""];
-    
-    NSRegularExpression *regular2 = [NSRegularExpression regularExpressionWithPattern:@"&[^\S]*;"
-                                                                              options:0
-                                                                                error:nil];
-    text = [regular2 stringByReplacingMatchesInString:text
-                                              options:NSMatchingReportProgress
-                                                range:NSMakeRange(0, [text length])
-                                         withTemplate:@""];
-    return text;
 }
 
 #pragma mark -

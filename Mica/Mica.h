@@ -13,6 +13,7 @@
 
     #import "UIColor+MCColor.h"
     #import "NSString+MCString.h"
+    #import "NSString+MCRegular.h"
     #import "NSNumber+MCNumber.h"
 
     #import "UITextField+MCTextField.h"
