@@ -14,10 +14,15 @@
 @interface NSString (MCRegular)
 
 /**
- Returns a new string object that has be cleared HTML tags.
+ Returns a new string containing matching regular pattern removed.
+ @param pattern The regular expression pattern string.
  */
 - (NSString *)stringByCleanWithPattern:(NSString *)pattern;
 
+/**
+ Returns wether the receiver matches of the regular pattern.
+ @param pattern The regular expression pattern string.
+ */
 - (BOOL)isContainPattern:(NSString *)pattern;
 
 @end
