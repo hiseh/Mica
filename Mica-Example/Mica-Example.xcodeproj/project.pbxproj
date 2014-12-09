@@ -34,6 +34,8 @@
 		3CACD9BD1A280F18008220AB /* MCStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CACD9BC1A280F18008220AB /* MCStringTests.m */; };
 		3CACD9BF1A28208C008220AB /* MCNumberTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CACD9BE1A28208C008220AB /* MCNumberTests.m */; };
 		3CACD9C11A2849AC008220AB /* MCColorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CACD9C01A2849AC008220AB /* MCColorTests.m */; };
+		3CAD1A631A370F05003E33F2 /* OpenSSLRSAWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAD1A621A370F05003E33F2 /* OpenSSLRSAWrapper.m */; };
+		3CAD1A661A370F56003E33F2 /* NSData+MCAES.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAD1A651A370F56003E33F2 /* NSData+MCAES.m */; };
 		3CD95DF01A2ED96D0041F343 /* UIScrollView+SVInfiniteScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD95DED1A2ED96D0041F343 /* UIScrollView+SVInfiniteScrolling.m */; };
 		3CD95DF11A2ED96D0041F343 /* UIScrollView+SVPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD95DEF1A2ED96D0041F343 /* UIScrollView+SVPullToRefresh.m */; };
 		3CD95DF51A2ED9FE0041F343 /* PlistModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD95DF41A2ED9FE0041F343 /* PlistModel.m */; };
@@ -98,6 +100,10 @@
 		3CACD9BC1A280F18008220AB /* MCStringTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCStringTests.m; sourceTree = "<group>"; };
 		3CACD9BE1A28208C008220AB /* MCNumberTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCNumberTests.m; sourceTree = "<group>"; };
 		3CACD9C01A2849AC008220AB /* MCColorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCColorTests.m; sourceTree = "<group>"; };
+		3CAD1A611A370F05003E33F2 /* OpenSSLRSAWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenSSLRSAWrapper.h; sourceTree = "<group>"; };
+		3CAD1A621A370F05003E33F2 /* OpenSSLRSAWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenSSLRSAWrapper.m; sourceTree = "<group>"; };
+		3CAD1A641A370F56003E33F2 /* NSData+MCAES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+MCAES.h"; path = "../Mica/NSData+MCAES.h"; sourceTree = "<group>"; };
+		3CAD1A651A370F56003E33F2 /* NSData+MCAES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+MCAES.m"; path = "../Mica/NSData+MCAES.m"; sourceTree = "<group>"; };
 		3CD95DEB1A2ED96D0041F343 /* SVPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVPullToRefresh.h; sourceTree = "<group>"; };
 		3CD95DEC1A2ED96D0041F343 /* UIScrollView+SVInfiniteScrolling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SVInfiniteScrolling.h"; sourceTree = "<group>"; };
 		3CD95DED1A2ED96D0041F343 /* UIScrollView+SVInfiniteScrolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVInfiniteScrolling.m"; sourceTree = "<group>"; };
@@ -141,6 +147,8 @@
 		3C3E891C1A368D300030B3E6 /* Encrypt */ = {
 			isa = PBXGroup;
 			children = (
+				3CAD1A641A370F56003E33F2 /* NSData+MCAES.h */,
+				3CAD1A651A370F56003E33F2 /* NSData+MCAES.m */,
 			);
 			name = Encrypt;
 			sourceTree = "<group>";
@@ -269,10 +277,21 @@
 		3CACD9C21A284DD7008220AB /* ThirdPart */ = {
 			isa = PBXGroup;
 			children = (
+				3CAD1A601A370F05003E33F2 /* OpenSSLRSAWrapper */,
 				3CD95DF21A2ED9FE0041F343 /* PlistModel */,
 				3CD95DEA1A2ED96D0041F343 /* SVPullToRefresh */,
 			);
 			name = ThirdPart;
+			sourceTree = "<group>";
+		};
+		3CAD1A601A370F05003E33F2 /* OpenSSLRSAWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				3CAD1A611A370F05003E33F2 /* OpenSSLRSAWrapper.h */,
+				3CAD1A621A370F05003E33F2 /* OpenSSLRSAWrapper.m */,
+			);
+			name = OpenSSLRSAWrapper;
+			path = ../ThirdPart/OpenSSLRSAWrapper;
 			sourceTree = "<group>";
 		};
 		3CD95DEA1A2ED96D0041F343 /* SVPullToRefresh */ = {
@@ -413,6 +432,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CAD1A661A370F56003E33F2 /* NSData+MCAES.m in Sources */,
 				3CD95DF51A2ED9FE0041F343 /* PlistModel.m in Sources */,
 				3C9B48E41A2D690300623E1A /* UITextView+MCTextView.m in Sources */,
 				3C9DCCD91A25C133002C4A8B /* ViewController.m in Sources */,
@@ -425,6 +445,7 @@
 				3C1A26271A35F27700BE1C1F /* NSString+MCRegular.m in Sources */,
 				3C54CC751A3037B000D20588 /* MCGridView.m in Sources */,
 				3C4C0CF21A2C531A00BC6CB1 /* UILabel+MCLabel.m in Sources */,
+				3CAD1A631A370F05003E33F2 /* OpenSSLRSAWrapper.m in Sources */,
 				3C09FFC21A2708DA0081600E /* NSString+MCString.m in Sources */,
 				3C09FFBF1A26FD4C0081600E /* UIColor+MCColor.m in Sources */,
 				3CD95DF11A2ED96D0041F343 /* UIScrollView+SVPullToRefresh.m in Sources */,
