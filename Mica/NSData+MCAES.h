@@ -1,5 +1,5 @@
 //
-//  NSData+AES.h
+//  NSData+MCAES.h
 //  Mica-Example
 //
 //  Created by hiseh yin on 14/12/9.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSData (AES)
+@interface NSData (MCAES)
 
 /**
  Returns a new data object made by aes encrypting.
