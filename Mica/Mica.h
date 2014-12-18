@@ -26,7 +26,6 @@
     #import "MCGridView.h"
 
     #import "NSData+MCAES.h"
-    #import "OpenSSLRSAWrapper.h"
 
 #define MC_PARAMETERS_FILE @"Parameters"
 
