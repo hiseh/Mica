@@ -10,6 +10,7 @@
 
 @interface NSData (MCSecurity)
 
+#pragma mark - AES
 /**
  Returns a new data object made by aes encrypting.
  @param key The AES key.
