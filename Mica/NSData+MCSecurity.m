@@ -73,9 +73,21 @@
     digest = malloc(CC_MD5_DIGEST_LENGTH);
     
     CC_MD5([self bytes], (CC_LONG)[self length], digest);
-    NSData *result = [NSData dataWithBytes:digest length:CC_MD5_DIGEST_LENGTH];
+    NSData *md5Data = [NSData dataWithBytes:digest length:CC_MD5_DIGEST_LENGTH];
     free(digest);
     
-    return result;
+    return md5Data;
+}
+
+#pragma mark - sha
+- (NSData *)sha1 {
+    unsigned char *digest;
+    digest = malloc(CC_SHA1_DIGEST_LENGTH);
+    
+    CC_SHA1([self bytes], (CC_LONG)[self length], digest);
+    NSData *resultData = [NSData dataWithBytes:digest length:CC_SHA1_DIGEST_LENGTH];
+    free(digest);
+    
+    return resultData;
 }
 @end

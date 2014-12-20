@@ -28,4 +28,11 @@
  Return a new data object encrypting with md5
  */
 - (NSData *)md5;
+
+#pragma mark - SHA
+/**
+ Return a new data object encrypting with sha1
+ */
+- (NSData *)sha1;
+
 @end

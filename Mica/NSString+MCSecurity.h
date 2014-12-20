@@ -17,4 +17,8 @@
  */
 - (NSString *)md5;
 
+/**
+ Return a new string object encrypting by sha1
+ */
+- (NSString *)sha1;
 @end

@@ -55,6 +55,10 @@
     XCTAssertEqualObjects([aesKey__ md5], @"84ca01fb9d38a2850db52e84fd2f77cc");
 }
 
+- (void)test_sha1 {
+    XCTAssertEqualObjects([aesKey__ sha1], @"082e3012a12cbbf8b4412c7f0627097eb102824d");
+}
+
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
     [self measureBlock:^{
