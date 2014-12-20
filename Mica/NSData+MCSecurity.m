@@ -1,18 +1,17 @@
 //
-//  NSData+MCAES.m
+//  NSData+MCSecurity.m
 //  Mica-Example
 //
-//  Created by hiseh yin on 14/12/9.
+//  Created by hiseh yin on 14/12/20.
 //  Copyright (c) 2014年 hiseh. All rights reserved.
 //
 
-#import "NSData+MCAES.h"
+#import "NSData+MCSecurity.h"
 #import <CommonCrypto/CommonCrypto.h>
 
-@implementation NSData (MCAES)
+@implementation NSData (MCSecurity)
 
-- (NSData *)AES256EncryptWithKey:(NSString *)key
-{
+- (NSData *)encryptAES256WithKey:(NSString *)key {
     char keyPtr[kCCKeySizeAES256+1];
     bzero(keyPtr, sizeof(keyPtr));
     [key getCString:keyPtr maxLength:sizeof(keyPtr) encoding:NSUTF8StringEncoding];
@@ -39,8 +38,7 @@
 }
 
 
-- (NSData *)AES256DecryptWithKey:(NSString *)key
-{
+- (NSData *)decryptAES256WithKey:(NSString *)key {
     char keyPtr[kCCKeySizeAES256+1];
     bzero(keyPtr, sizeof(keyPtr));
     

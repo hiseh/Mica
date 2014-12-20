@@ -10,6 +10,7 @@
 		3C09FFBC1A26C5030081600E /* Parameters.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C09FFBB1A26C5030081600E /* Parameters.plist */; };
 		3C09FFBF1A26FD4C0081600E /* UIColor+MCColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C09FFBE1A26FD4C0081600E /* UIColor+MCColor.m */; };
 		3C09FFC21A2708DA0081600E /* NSString+MCString.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C09FFC11A2708DA0081600E /* NSString+MCString.m */; };
+		3C1784191A451F4D002D8C8E /* NSData+MCSecurity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1784181A451F4D002D8C8E /* NSData+MCSecurity.m */; };
 		3C1A26271A35F27700BE1C1F /* NSString+MCRegular.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A26261A35F27700BE1C1F /* NSString+MCRegular.m */; };
 		3C350B741A276B5A00979958 /* NSNumber+MCNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C350B731A276B5A00979958 /* NSNumber+MCNumber.m */; };
 		3C3E89201A36A9B10030B3E6 /* MCRegularTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C3E891F1A36A9B10030B3E6 /* MCRegularTests.m */; };
@@ -34,7 +35,6 @@
 		3CACD9BD1A280F18008220AB /* MCStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CACD9BC1A280F18008220AB /* MCStringTests.m */; };
 		3CACD9BF1A28208C008220AB /* MCNumberTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CACD9BE1A28208C008220AB /* MCNumberTests.m */; };
 		3CACD9C11A2849AC008220AB /* MCColorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CACD9C01A2849AC008220AB /* MCColorTests.m */; };
-		3CAD1A661A370F56003E33F2 /* NSData+MCAES.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAD1A651A370F56003E33F2 /* NSData+MCAES.m */; };
 		3CD95DF01A2ED96D0041F343 /* UIScrollView+SVInfiniteScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD95DED1A2ED96D0041F343 /* UIScrollView+SVInfiniteScrolling.m */; };
 		3CD95DF11A2ED96D0041F343 /* UIScrollView+SVPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD95DEF1A2ED96D0041F343 /* UIScrollView+SVPullToRefresh.m */; };
 		3CD95DF51A2ED9FE0041F343 /* PlistModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD95DF41A2ED9FE0041F343 /* PlistModel.m */; };
@@ -58,6 +58,8 @@
 		3C09FFBE1A26FD4C0081600E /* UIColor+MCColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+MCColor.m"; path = "../Mica/UIColor+MCColor.m"; sourceTree = "<group>"; };
 		3C09FFC01A2708DA0081600E /* NSString+MCString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+MCString.h"; path = "../Mica/NSString+MCString.h"; sourceTree = "<group>"; };
 		3C09FFC11A2708DA0081600E /* NSString+MCString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+MCString.m"; path = "../Mica/NSString+MCString.m"; sourceTree = "<group>"; };
+		3C1784171A451F4D002D8C8E /* NSData+MCSecurity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+MCSecurity.h"; path = "../Mica/NSData+MCSecurity.h"; sourceTree = "<group>"; };
+		3C1784181A451F4D002D8C8E /* NSData+MCSecurity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+MCSecurity.m"; path = "../Mica/NSData+MCSecurity.m"; sourceTree = "<group>"; };
 		3C1A26251A35F27700BE1C1F /* NSString+MCRegular.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+MCRegular.h"; path = "../Mica/NSString+MCRegular.h"; sourceTree = "<group>"; };
 		3C1A26261A35F27700BE1C1F /* NSString+MCRegular.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+MCRegular.m"; path = "../Mica/NSString+MCRegular.m"; sourceTree = "<group>"; };
 		3C350B721A276B5A00979958 /* NSNumber+MCNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber+MCNumber.h"; path = "../Mica/NSNumber+MCNumber.h"; sourceTree = "<group>"; };
@@ -100,8 +102,6 @@
 		3CACD9BC1A280F18008220AB /* MCStringTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCStringTests.m; sourceTree = "<group>"; };
 		3CACD9BE1A28208C008220AB /* MCNumberTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCNumberTests.m; sourceTree = "<group>"; };
 		3CACD9C01A2849AC008220AB /* MCColorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCColorTests.m; sourceTree = "<group>"; };
-		3CAD1A641A370F56003E33F2 /* NSData+MCAES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+MCAES.h"; path = "../Mica/NSData+MCAES.h"; sourceTree = "<group>"; };
-		3CAD1A651A370F56003E33F2 /* NSData+MCAES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+MCAES.m"; path = "../Mica/NSData+MCAES.m"; sourceTree = "<group>"; };
 		3CD95DEB1A2ED96D0041F343 /* SVPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVPullToRefresh.h; sourceTree = "<group>"; };
 		3CD95DEC1A2ED96D0041F343 /* UIScrollView+SVInfiniteScrolling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SVInfiniteScrolling.h"; sourceTree = "<group>"; };
 		3CD95DED1A2ED96D0041F343 /* UIScrollView+SVInfiniteScrolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVInfiniteScrolling.m"; sourceTree = "<group>"; };
@@ -146,8 +146,8 @@
 		3C3E891C1A368D300030B3E6 /* MCSecurity */ = {
 			isa = PBXGroup;
 			children = (
-				3CAD1A641A370F56003E33F2 /* NSData+MCAES.h */,
-				3CAD1A651A370F56003E33F2 /* NSData+MCAES.m */,
+				3C1784171A451F4D002D8C8E /* NSData+MCSecurity.h */,
+				3C1784181A451F4D002D8C8E /* NSData+MCSecurity.m */,
 			);
 			name = MCSecurity;
 			sourceTree = "<group>";
@@ -421,7 +421,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CAD1A661A370F56003E33F2 /* NSData+MCAES.m in Sources */,
 				3CD95DF51A2ED9FE0041F343 /* PlistModel.m in Sources */,
 				3C9B48E41A2D690300623E1A /* UITextView+MCTextView.m in Sources */,
 				3C9DCCD91A25C133002C4A8B /* ViewController.m in Sources */,
@@ -429,6 +428,7 @@
 				3C9DCCD61A25C133002C4A8B /* AppDelegate.m in Sources */,
 				3C350B741A276B5A00979958 /* NSNumber+MCNumber.m in Sources */,
 				3C9DCCD31A25C133002C4A8B /* main.m in Sources */,
+				3C1784191A451F4D002D8C8E /* NSData+MCSecurity.m in Sources */,
 				3C7729D01A2EC33400E5679D /* MCListView.m in Sources */,
 				3C3E89231A36CC7D0030B3E6 /* NSString+MCEmoji.m in Sources */,
 				3C1A26271A35F27700BE1C1F /* NSString+MCRegular.m in Sources */,
