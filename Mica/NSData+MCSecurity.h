@@ -23,4 +23,9 @@
  */
 - (NSData *)decryptAES256WithKey:(NSString *)key;
 
+#pragma mark - MD5
+/**
+ Return a new data object encrypting with md5
+ */
+- (NSData *)md5;
 @end

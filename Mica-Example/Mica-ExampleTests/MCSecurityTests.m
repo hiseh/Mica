@@ -1,16 +1,17 @@
 //
-//  MCAESTests.m
+//  MCSecurityTests.m
 //  Mica-Example
 //
-//  Created by hiseh yin on 14/12/18.
+//  Created by hiseh yin on 14/12/20.
 //  Copyright (c) 2014年 hiseh. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
-#import "NSData+MCAES.h"
+#import "NSData+MCSecurity.h"
+#import "NSString+MCSecurity.h"
 
-@interface MCAESTests : XCTestCase {
+@interface MCSecurityTests : XCTestCase {
 @private
     NSData      *originalData__;
     NSData      *encryptData__;
@@ -20,10 +21,11 @@
 
 @end
 
-@implementation MCAESTests
+@implementation MCSecurityTests
 
 - (void)setUp {
     [super setUp];
+    // Put setup code here. This method is called before the invocation of each test method in the class.
     aesKey__ = @"lsdfhs";
     originalData__ = [@"hello" dataUsingEncoding:NSUTF8StringEncoding];
 }
@@ -33,19 +35,24 @@
     [super tearDown];
 }
 
-- (void)test_AES256EncryptWithKey {
+#pragma mark - aes
+- (void)test_encryptAES256WithKey {
     NSString *tempStr = @"hello";
-    encryptData__ = [originalData__ AES256EncryptWithKey:aesKey__];
-    XCTAssertEqualObjects(encryptData__, [[tempStr dataUsingEncoding:NSUTF8StringEncoding] AES256EncryptWithKey:aesKey__]);
+    encryptData__ = [originalData__ encryptAES256WithKey:aesKey__];
+    XCTAssertEqualObjects(encryptData__, [[tempStr dataUsingEncoding:NSUTF8StringEncoding] encryptAES256WithKey:aesKey__]);
 }
 
-- (void)test_AES256DecryptWithKey {
-    encryptData__ = [originalData__ AES256EncryptWithKey:aesKey__];
-    decryptData__ = [encryptData__ AES256DecryptWithKey:aesKey__];
+- (void)test_decryptAES256WithKey {
+    encryptData__ = [originalData__ encryptAES256WithKey:aesKey__];
+    decryptData__ = [encryptData__ decryptAES256WithKey:aesKey__];
     NSString *result = [[[NSString alloc] initWithData:decryptData__ encoding:NSUTF8StringEncoding]
                         stringByTrimmingCharactersInSet:[NSCharacterSet controlCharacterSet]];
     XCTAssertEqualObjects(result, @"hello");
-    
+}
+
+#pragma mark - md5
+- (void)test_md5 {
+    XCTAssertEqualObjects([aesKey__ md5], @"84ca01fb9d38a2850db52e84fd2f77cc");
 }
 
 - (void)testPerformanceExample {

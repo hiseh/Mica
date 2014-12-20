@@ -25,7 +25,8 @@
     #import "MCListView.h"
     #import "MCGridView.h"
 
-    #import "NSData+MCAES.h"
+    #import "NSData+MCSecurity.h"
+    #import "NSString+MCSecurity.h"
 
 #define MC_PARAMETERS_FILE @"Parameters"
 

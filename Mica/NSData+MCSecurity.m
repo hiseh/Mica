@@ -10,7 +10,7 @@
 #import <CommonCrypto/CommonCrypto.h>
 
 @implementation NSData (MCSecurity)
-
+#pragma mark -
 - (NSData *)encryptAES256WithKey:(NSString *)key {
     char keyPtr[kCCKeySizeAES256+1];
     bzero(keyPtr, sizeof(keyPtr));
@@ -67,4 +67,15 @@
     return nil;
 }
 
+#pragma mark -
+- (NSData *)md5 {
+    unsigned char *digest;
+    digest = malloc(CC_MD5_DIGEST_LENGTH);
+    
+    CC_MD5([self bytes], (CC_LONG)[self length], digest);
+    NSData *result = [NSData dataWithBytes:digest length:CC_MD5_DIGEST_LENGTH];
+    free(digest);
+    
+    return result;
+}
 @end
