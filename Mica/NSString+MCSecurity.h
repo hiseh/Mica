@@ -13,7 +13,6 @@
 #pragma mark - MD5
 /**
  Returns a new string object encrypting by md5.
- @param key The AES key.
  */
 - (NSString *)md5;
 
