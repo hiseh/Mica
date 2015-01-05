@@ -119,6 +119,7 @@ NSUInteger const LIST_ELEMENT_TAG = 8000;
     tableView__.alwaysBounceHorizontal = NO;
     tableView__.alwaysBounceVertical = YES;
     tableView__.bouncesZoom = NO;
+    tableView__.tableFooterView = [[UIView alloc] init];
     [self addSubview:tableView__];
     
     if (pullActionType__ != MCListViewPullActionNone) {
