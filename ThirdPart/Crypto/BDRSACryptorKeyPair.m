@@ -1,0 +1,34 @@
+//
+//  Created by Patrick Hogan on 10/12/12.
+//
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma mark - Public Interface
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#import "BDRSACryptorKeyPair.h"
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma mark - Implementation
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@implementation BDRSACryptorKeyPair
+
+- (id)initWithPublicKey:(NSString *)publicKey
+        remotePublicKey:(NSString *)remotePublicKey
+        exportPublicKey:(NSString *)exportPublicKey
+             privateKey:(NSString *)privateKey
+{
+    self = [super init];
+    
+    if (self)
+    {
+        self.publicKey = publicKey;
+        self.remotePublicKey = remotePublicKey;
+        self.privateKey = privateKey;
+        self.exportPublicKey = exportPublicKey;
+    }
+    
+    return self;
+}
+@end

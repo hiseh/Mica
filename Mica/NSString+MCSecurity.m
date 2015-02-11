@@ -31,4 +31,10 @@
     return [self decodeEncryptData:sha1Data length:CC_SHA1_DIGEST_LENGTH];
 }
 
+- (NSString *)sha512 {
+    NSData *sha512Data = [[self dataUsingEncoding:NSUTF8StringEncoding] sha512];
+    return [self decodeEncryptData:sha512Data length:CC_SHA512_DIGEST_LENGTH];
+    
+}
+
 @end

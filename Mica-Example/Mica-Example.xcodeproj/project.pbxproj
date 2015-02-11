@@ -15,6 +15,13 @@
 		3C17841E1A4523BD002D8C8E /* MCSecurityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C17841D1A4523BD002D8C8E /* MCSecurityTests.m */; };
 		3C1A26271A35F27700BE1C1F /* NSString+MCRegular.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A26261A35F27700BE1C1F /* NSString+MCRegular.m */; };
 		3C350B741A276B5A00979958 /* NSNumber+MCNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C350B731A276B5A00979958 /* NSNumber+MCNumber.m */; };
+		3C36E81A1A89E97300391411 /* MCRSATests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C36E8191A89E97300391411 /* MCRSATests.m */; };
+		3C36E8241A89F48500391411 /* BDCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C36E81D1A89F48500391411 /* BDCryptor.m */; };
+		3C36E8251A89F48500391411 /* BDCryptorError.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C36E81F1A89F48500391411 /* BDCryptorError.m */; };
+		3C36E8261A89F48500391411 /* BDRSACryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C36E8211A89F48500391411 /* BDRSACryptor.m */; };
+		3C36E8271A89F48500391411 /* BDRSACryptorKeyPair.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C36E8231A89F48500391411 /* BDRSACryptorKeyPair.m */; };
+		3C36E82A1A89F52500391411 /* BDError.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C36E8291A89F52500391411 /* BDError.m */; };
+		3C36E82D1A8A034300391411 /* NSData+Cryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C36E82C1A8A034300391411 /* NSData+Cryptor.m */; };
 		3C3E89201A36A9B10030B3E6 /* MCRegularTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C3E891F1A36A9B10030B3E6 /* MCRegularTests.m */; };
 		3C3E89231A36CC7D0030B3E6 /* NSString+MCEmoji.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C3E89221A36CC7D0030B3E6 /* NSString+MCEmoji.m */; };
 		3C4C0CF21A2C531A00BC6CB1 /* UILabel+MCLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C0CF11A2C531A00BC6CB1 /* UILabel+MCLabel.m */; };
@@ -41,6 +48,7 @@
 		3CD95DF11A2ED96D0041F343 /* UIScrollView+SVPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD95DEF1A2ED96D0041F343 /* UIScrollView+SVPullToRefresh.m */; };
 		3CD95DF51A2ED9FE0041F343 /* PlistModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD95DF41A2ED9FE0041F343 /* PlistModel.m */; };
 		3CD95DF81A2EDC360041F343 /* UIView+MCView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD95DF71A2EDC360041F343 /* UIView+MCView.m */; };
+		3CEC632E1A7A0FC800E6C79C /* MCRSA.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CEC632D1A7A0FC800E6C79C /* MCRSA.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +77,19 @@
 		3C350B721A276B5A00979958 /* NSNumber+MCNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber+MCNumber.h"; path = "../Mica/NSNumber+MCNumber.h"; sourceTree = "<group>"; };
 		3C350B731A276B5A00979958 /* NSNumber+MCNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+MCNumber.m"; path = "../Mica/NSNumber+MCNumber.m"; sourceTree = "<group>"; };
 		3C350B751A276C8800979958 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		3C36E8191A89E97300391411 /* MCRSATests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCRSATests.m; sourceTree = "<group>"; };
+		3C36E81C1A89F48500391411 /* BDCryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDCryptor.h; sourceTree = "<group>"; };
+		3C36E81D1A89F48500391411 /* BDCryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDCryptor.m; sourceTree = "<group>"; };
+		3C36E81E1A89F48500391411 /* BDCryptorError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDCryptorError.h; sourceTree = "<group>"; };
+		3C36E81F1A89F48500391411 /* BDCryptorError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDCryptorError.m; sourceTree = "<group>"; };
+		3C36E8201A89F48500391411 /* BDRSACryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDRSACryptor.h; sourceTree = "<group>"; };
+		3C36E8211A89F48500391411 /* BDRSACryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDRSACryptor.m; sourceTree = "<group>"; };
+		3C36E8221A89F48500391411 /* BDRSACryptorKeyPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDRSACryptorKeyPair.h; sourceTree = "<group>"; };
+		3C36E8231A89F48500391411 /* BDRSACryptorKeyPair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDRSACryptorKeyPair.m; sourceTree = "<group>"; };
+		3C36E8281A89F52500391411 /* BDError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDError.h; sourceTree = "<group>"; };
+		3C36E8291A89F52500391411 /* BDError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDError.m; sourceTree = "<group>"; };
+		3C36E82B1A8A034300391411 /* NSData+Cryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Cryptor.h"; sourceTree = "<group>"; };
+		3C36E82C1A8A034300391411 /* NSData+Cryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Cryptor.m"; sourceTree = "<group>"; };
 		3C3E891E1A369DDD0030B3E6 /* emojis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = emojis.h; sourceTree = "<group>"; };
 		3C3E891F1A36A9B10030B3E6 /* MCRegularTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCRegularTests.m; sourceTree = "<group>"; };
 		3C3E89211A36CC7D0030B3E6 /* NSString+MCEmoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+MCEmoji.h"; path = "../Mica/NSString+MCEmoji.h"; sourceTree = "<group>"; };
@@ -115,6 +136,8 @@
 		3CD95DF41A2ED9FE0041F343 /* PlistModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistModel.m; sourceTree = "<group>"; };
 		3CD95DF61A2EDC360041F343 /* UIView+MCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+MCView.h"; path = "../Mica/UIView+MCView.h"; sourceTree = "<group>"; };
 		3CD95DF71A2EDC360041F343 /* UIView+MCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+MCView.m"; path = "../Mica/UIView+MCView.m"; sourceTree = "<group>"; };
+		3CEC632C1A7A0FC800E6C79C /* MCRSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCRSA.h; path = ../Mica/MCRSA.h; sourceTree = "<group>"; };
+		3CEC632D1A7A0FC800E6C79C /* MCRSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCRSA.m; path = ../Mica/MCRSA.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +169,26 @@
 			name = Classes;
 			sourceTree = "<group>";
 		};
+		3C36E81B1A89F48500391411 /* Crypto */ = {
+			isa = PBXGroup;
+			children = (
+				3C36E81C1A89F48500391411 /* BDCryptor.h */,
+				3C36E81D1A89F48500391411 /* BDCryptor.m */,
+				3C36E81E1A89F48500391411 /* BDCryptorError.h */,
+				3C36E81F1A89F48500391411 /* BDCryptorError.m */,
+				3C36E8281A89F52500391411 /* BDError.h */,
+				3C36E8291A89F52500391411 /* BDError.m */,
+				3C36E8201A89F48500391411 /* BDRSACryptor.h */,
+				3C36E8211A89F48500391411 /* BDRSACryptor.m */,
+				3C36E8221A89F48500391411 /* BDRSACryptorKeyPair.h */,
+				3C36E8231A89F48500391411 /* BDRSACryptorKeyPair.m */,
+				3C36E82B1A8A034300391411 /* NSData+Cryptor.h */,
+				3C36E82C1A8A034300391411 /* NSData+Cryptor.m */,
+			);
+			name = Crypto;
+			path = ../ThirdPart/Crypto;
+			sourceTree = "<group>";
+		};
 		3C3E891C1A368D300030B3E6 /* MCSecurity */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +196,8 @@
 				3C1784181A451F4D002D8C8E /* NSData+MCSecurity.m */,
 				3C17841A1A452046002D8C8E /* NSString+MCSecurity.h */,
 				3C17841B1A452046002D8C8E /* NSString+MCSecurity.m */,
+				3CEC632C1A7A0FC800E6C79C /* MCRSA.h */,
+				3CEC632D1A7A0FC800E6C79C /* MCRSA.m */,
 			);
 			name = MCSecurity;
 			sourceTree = "<group>";
@@ -250,6 +295,7 @@
 				3C4C0CF31A2C5D7500BC6CB1 /* MCLabelTests.m */,
 				3CACD9BE1A28208C008220AB /* MCNumberTests.m */,
 				3C3E891F1A36A9B10030B3E6 /* MCRegularTests.m */,
+				3C36E8191A89E97300391411 /* MCRSATests.m */,
 				3C17841D1A4523BD002D8C8E /* MCSecurityTests.m */,
 				3CACD9BC1A280F18008220AB /* MCStringTests.m */,
 				3C9B48DF1A2D61F500623E1A /* MCTextFieldTests.m */,
@@ -282,6 +328,7 @@
 		3CACD9C21A284DD7008220AB /* ThirdPart */ = {
 			isa = PBXGroup;
 			children = (
+				3C36E81B1A89F48500391411 /* Crypto */,
 				3CD95DF21A2ED9FE0041F343 /* PlistModel */,
 				3CD95DEA1A2ED96D0041F343 /* SVPullToRefresh */,
 			);
@@ -426,23 +473,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C36E8241A89F48500391411 /* BDCryptor.m in Sources */,
 				3CD95DF51A2ED9FE0041F343 /* PlistModel.m in Sources */,
 				3C9B48E41A2D690300623E1A /* UITextView+MCTextView.m in Sources */,
 				3C9DCCD91A25C133002C4A8B /* ViewController.m in Sources */,
 				3C17841C1A452046002D8C8E /* NSString+MCSecurity.m in Sources */,
+				3CEC632E1A7A0FC800E6C79C /* MCRSA.m in Sources */,
+				3C36E82D1A8A034300391411 /* NSData+Cryptor.m in Sources */,
 				3CD95DF81A2EDC360041F343 /* UIView+MCView.m in Sources */,
 				3C9DCCD61A25C133002C4A8B /* AppDelegate.m in Sources */,
 				3C350B741A276B5A00979958 /* NSNumber+MCNumber.m in Sources */,
 				3C9DCCD31A25C133002C4A8B /* main.m in Sources */,
 				3C1784191A451F4D002D8C8E /* NSData+MCSecurity.m in Sources */,
+				3C36E8251A89F48500391411 /* BDCryptorError.m in Sources */,
 				3C7729D01A2EC33400E5679D /* MCListView.m in Sources */,
 				3C3E89231A36CC7D0030B3E6 /* NSString+MCEmoji.m in Sources */,
+				3C36E82A1A89F52500391411 /* BDError.m in Sources */,
 				3C1A26271A35F27700BE1C1F /* NSString+MCRegular.m in Sources */,
+				3C36E8271A89F48500391411 /* BDRSACryptorKeyPair.m in Sources */,
 				3C54CC751A3037B000D20588 /* MCGridView.m in Sources */,
 				3C4C0CF21A2C531A00BC6CB1 /* UILabel+MCLabel.m in Sources */,
 				3C09FFC21A2708DA0081600E /* NSString+MCString.m in Sources */,
 				3C09FFBF1A26FD4C0081600E /* UIColor+MCColor.m in Sources */,
 				3CD95DF11A2ED96D0041F343 /* UIScrollView+SVPullToRefresh.m in Sources */,
+				3C36E8261A89F48500391411 /* BDRSACryptor.m in Sources */,
 				3CD95DF01A2ED96D0041F343 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				3C7729CD1A2EC2BA00E5679D /* MCView.m in Sources */,
 				3C9B48DE1A2D5FD000623E1A /* UITextField+MCTextField.m in Sources */,
@@ -461,6 +515,7 @@
 				3C9DCCED1A25C133002C4A8B /* Mica_ExampleTests.m in Sources */,
 				3C4C0CF41A2C5D7500BC6CB1 /* MCLabelTests.m in Sources */,
 				3CACD9BF1A28208C008220AB /* MCNumberTests.m in Sources */,
+				3C36E81A1A89E97300391411 /* MCRSATests.m in Sources */,
 				3CACD9C11A2849AC008220AB /* MCColorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -587,8 +642,20 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				GCC_PREFIX_HEADER = "Mica-Example/PrefixHeader.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../Mica,
+					"../Mica/ThirdPart/openSSL/**",
+					/Users/hiseh/workspace/Mica/ThirdPart/openSSL,
+				);
 				INFOPLIST_FILE = "Mica-Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"../Mica/ThirdPart/openSSL/**",
+					/Users/hiseh/workspace/Mica/ThirdPart/openSSL,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -599,8 +666,20 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				GCC_PREFIX_HEADER = "Mica-Example/PrefixHeader.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../Mica,
+					"../Mica/ThirdPart/openSSL/**",
+					/Users/hiseh/workspace/Mica/ThirdPart/openSSL,
+				);
 				INFOPLIST_FILE = "Mica-Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"../Mica/ThirdPart/openSSL/**",
+					/Users/hiseh/workspace/Mica/ThirdPart/openSSL,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

@@ -7,6 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+typedef enum {
+    RSAKeyLocal = 0,
+    RSAKeyString = 1
+} RSAKeyType;
 
 @interface NSString (MCSecurity)
 
@@ -20,4 +24,10 @@
  Return a new string object encrypting by sha1
  */
 - (NSString *)sha1;
+
+/**
+ Return a new string object encrypting by sha512
+ */
+- (NSString *)sha512;
+
 @end

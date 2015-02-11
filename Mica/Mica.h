@@ -27,6 +27,7 @@
 
     #import "NSData+MCSecurity.h"
     #import "NSString+MCSecurity.h"
+    #import "MCRSA.h"
 
 #define MC_PARAMETERS_FILE @"Parameters"
 

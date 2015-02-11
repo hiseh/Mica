@@ -41,7 +41,6 @@
                                                   dataSource:dataSource];
     gridView.delegate = self;
     [self.view addSubview:gridView];
-    
 }
 
 - (void)listViewShouldBeginLoadMore:(MCListView *)listView {

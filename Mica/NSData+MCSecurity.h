@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+
 @interface NSData (MCSecurity)
 
 #pragma mark - AES
@@ -34,5 +35,10 @@
  Return a new data object encrypting with sha1
  */
 - (NSData *)sha1;
+
+/**
+ Return a new data object encrypting with sha512
+ */
+- (NSData *)sha512;
 
 @end

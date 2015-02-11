@@ -26,7 +26,7 @@
 - (void)setUp {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
-    aesKey__ = @"lsdfhs";
+    aesKey__ = @"1111111111111111";
     originalData__ = [@"hello" dataUsingEncoding:NSUTF8StringEncoding];
 }
 
@@ -39,11 +39,12 @@
 - (void)test_encryptAES256WithKey {
     NSString *tempStr = @"hello";
     encryptData__ = [originalData__ encryptAES256WithKey:aesKey__];
+    NSString *baseStr = [encryptData__ base64Encoding];
     XCTAssertEqualObjects(encryptData__, [[tempStr dataUsingEncoding:NSUTF8StringEncoding] encryptAES256WithKey:aesKey__]);
 }
 
 - (void)test_decryptAES256WithKey {
-    encryptData__ = [originalData__ encryptAES256WithKey:aesKey__];
+    encryptData__ = [[NSData alloc] initWithBase64Encoding:@"c7fShySWnWRn6Njacfgoxw=="];
     decryptData__ = [encryptData__ decryptAES256WithKey:aesKey__];
     NSString *result = [[[NSString alloc] initWithData:decryptData__ encoding:NSUTF8StringEncoding]
                         stringByTrimmingCharactersInSet:[NSCharacterSet controlCharacterSet]];
@@ -52,11 +53,11 @@
 
 #pragma mark - md5
 - (void)test_md5 {
-    XCTAssertEqualObjects([aesKey__ md5], @"84ca01fb9d38a2850db52e84fd2f77cc");
+    XCTAssertEqualObjects([aesKey__ md5], @"fa1d3eb08a879de9a4cd9995a1aa91e1");
 }
 
 - (void)test_sha1 {
-    XCTAssertEqualObjects([aesKey__ sha1], @"082e3012a12cbbf8b4412c7f0627097eb102824d");
+    XCTAssertEqualObjects([aesKey__ sha1], @"747417f2206148a3118d02f3adf20b5e4139baac");
 }
 
 - (void)testPerformanceExample {

@@ -90,4 +90,15 @@
     
     return resultData;
 }
+
+- (NSData *)sha512 {
+    unsigned char *digest;
+    digest = malloc(CC_SHA512_DIGEST_LENGTH);
+    
+    CC_SHA512([self bytes], (CC_LONG)[self length], digest);
+    NSData *resultData = [NSData dataWithBytes:digest length:CC_SHA512_DIGEST_LENGTH];
+    free(digest);
+    return resultData;
+}
+
 @end
