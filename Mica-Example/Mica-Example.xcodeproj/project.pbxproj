@@ -48,6 +48,7 @@
 		3CD95DF11A2ED96D0041F343 /* UIScrollView+SVPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD95DEF1A2ED96D0041F343 /* UIScrollView+SVPullToRefresh.m */; };
 		3CD95DF51A2ED9FE0041F343 /* PlistModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD95DF41A2ED9FE0041F343 /* PlistModel.m */; };
 		3CD95DF81A2EDC360041F343 /* UIView+MCView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD95DF71A2EDC360041F343 /* UIView+MCView.m */; };
+		3CDFAF371A8C50920074327C /* Key.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3CDFAF361A8C50920074327C /* Key.plist */; };
 		3CEC632E1A7A0FC800E6C79C /* MCRSA.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CEC632D1A7A0FC800E6C79C /* MCRSA.m */; };
 /* End PBXBuildFile section */
 
@@ -136,6 +137,7 @@
 		3CD95DF41A2ED9FE0041F343 /* PlistModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistModel.m; sourceTree = "<group>"; };
 		3CD95DF61A2EDC360041F343 /* UIView+MCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+MCView.h"; path = "../Mica/UIView+MCView.h"; sourceTree = "<group>"; };
 		3CD95DF71A2EDC360041F343 /* UIView+MCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+MCView.m"; path = "../Mica/UIView+MCView.m"; sourceTree = "<group>"; };
+		3CDFAF361A8C50920074327C /* Key.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Key.plist; path = ../Mica/Key.plist; sourceTree = "<group>"; };
 		3CEC632C1A7A0FC800E6C79C /* MCRSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCRSA.h; path = ../Mica/MCRSA.h; sourceTree = "<group>"; };
 		3CEC632D1A7A0FC800E6C79C /* MCRSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCRSA.m; path = ../Mica/MCRSA.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -321,6 +323,7 @@
 				3C9B48E51A2D6A7800623E1A /* Images */,
 				3C9DCCF81A25C1B9002C4A8B /* Mica.h */,
 				3C09FFBB1A26C5030081600E /* Parameters.plist */,
+				3CDFAF361A8C50920074327C /* Key.plist */,
 			);
 			name = Mica;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 			files = (
 				3C9DCCDC1A25C133002C4A8B /* Main.storyboard in Resources */,
 				3C9DCCE11A25C133002C4A8B /* LaunchScreen.xib in Resources */,
+				3CDFAF371A8C50920074327C /* Key.plist in Resources */,
 				3C09FFBC1A26C5030081600E /* Parameters.plist in Resources */,
 				3C9B48E71A2D6A7800623E1A /* clear_button.png in Resources */,
 				3C9DCCDE1A25C133002C4A8B /* Images.xcassets in Resources */,
@@ -657,6 +661,7 @@
 					/Users/hiseh/workspace/Mica/ThirdPart/openSSL,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "i386 armv7 armv7s arm64";
 			};
 			name = Debug;
 		};
@@ -681,6 +686,7 @@
 					/Users/hiseh/workspace/Mica/ThirdPart/openSSL,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "i386 armv7 armv7s arm64";
 			};
 			name = Release;
 		};

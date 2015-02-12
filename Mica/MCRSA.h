@@ -21,6 +21,7 @@ typedef enum {
     BDRSACryptorKeyPair *RSAKeyPair__;
     NSString *identifier__;
     BDRSACryptor *rsa__;
+    NSString *rsaKeyFilePath__;
 }
 
 - (instancetype)initWithIdntifier:(NSString *)identifier;
@@ -48,6 +49,30 @@ typedef enum {
  @return success or not.
  */
 - (BOOL)importRemotePublicKey:(NSString *)publicKeyStr;
+
+/**
+ Generates a remote public key by reading data from the file.
+ @return success or not.
+ */
+- (BOOL)remotePublicKeyWithContentsOfFile;
+
+/**
+ Writes the remote public key to the file.
+ @return success or not.
+ */
+- (BOOL)remotePublicKeyWriteToFile;
+
+/**
+ Imports local RSA key by reading data from the file.
+ @return success or not.
+ */
+- (BOOL)localKeyPairWithContentsOfFile;
+
+/**
+ Writes the local rsa key to the file.
+ @return success or not.
+ */
+- (BOOL)localKeyWriteToFile;
 
 /**
  Encrypt the text with RSA public key.

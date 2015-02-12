@@ -23,6 +23,12 @@ NSString * const RSA_PRIVATE_KEY_FOOTER = @"-----END RSA PRIVATE KEY-----";
         identifier__ = identifier;
         RSAKeyPair__ = [[BDRSACryptorKeyPair alloc] init];
         rsa__ = [[BDRSACryptor alloc] init];
+        rsaKeyFilePath__ = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES) lastObject] stringByAppendingString:@"/mica/rsa/key/"];
+        
+        [[NSFileManager defaultManager] createDirectoryAtPath:rsaKeyFilePath__
+                                  withIntermediateDirectories:YES
+                                                   attributes:nil
+                                                        error:nil];
     }
     return self;
 }
@@ -68,6 +74,67 @@ NSString * const RSA_PRIVATE_KEY_FOOTER = @"-----END RSA PRIVATE KEY-----";
     NSString *remotePublicKeyIdentifier = [self remotePublicKeyIdentifier];
     [rsa__ setPublicKey:pemStr tag:remotePublicKeyIdentifier error:error__];
     return ![BDError errorContainsErrors:error__];
+}
+
+- (BOOL)remotePublicKeyWriteToFile {
+    if (!RSAKeyPair__.remotePublicKey || [RSAKeyPair__.remotePublicKey isEmpty]) {
+        return NO;
+    }
+    
+    NSError *error;
+    return [RSAKeyPair__.remotePublicKey writeToFile:[rsaKeyFilePath__ stringByAppendingFormat:@"%@_remote_public_key", identifier__]
+                                          atomically:YES
+                                            encoding:NSASCIIStringEncoding
+                                               error:&error];
+}
+
+- (BOOL)remotePublicKeyWithContentsOfFile {
+    NSError *error;
+    NSString *remotePublicKeyStr = [NSString stringWithContentsOfFile:[rsaKeyFilePath__ stringByAppendingFormat:@"%@_remote_public_key", identifier__]
+                                                             encoding:NSASCIIStringEncoding
+                                                                error:&error];
+    if (! remotePublicKeyStr || [remotePublicKeyStr isEmpty] || error) {
+        return NO;
+    }
+    
+    RSAKeyPair__.remotePublicKey = remotePublicKeyStr;
+    return YES;
+}
+
+- (BOOL)localKeyWriteToFile {
+    if (!RSAKeyPair__.publicKey || !RSAKeyPair__.privateKey || [RSAKeyPair__.publicKey isEmpty] || [RSAKeyPair__.privateKey isEmpty]) {
+        return NO;
+    }
+    
+    NSError *error;
+    BOOL publicKeyResult, privateKeyResult;
+    publicKeyResult = [RSAKeyPair__.publicKey writeToFile:[rsaKeyFilePath__ stringByAppendingFormat:@"%@_local_public_key", identifier__]
+                                               atomically:YES
+                                                 encoding:NSASCIIStringEncoding
+                                                    error:&error];
+    privateKeyResult = [RSAKeyPair__.privateKey writeToFile:[rsaKeyFilePath__ stringByAppendingFormat:@"%@_local_private_key", identifier__]
+                                                 atomically:YES
+                                                   encoding:NSASCIIStringEncoding
+                                                      error:&error];
+    
+    return publicKeyResult && privateKeyResult;
+}
+
+- (BOOL)localKeyPairWithContentsOfFile {
+    NSError *publicError, *privateError;
+    NSString *localPublicKeyStr = [NSString stringWithContentsOfFile:[rsaKeyFilePath__ stringByAppendingFormat:@"%@_local_public_key", identifier__]
+                                                            encoding:NSASCIIStringEncoding
+                                                               error:&publicError];
+    NSString *localPrivateKeyStr = [NSString stringWithContentsOfFile:[rsaKeyFilePath__ stringByAppendingFormat:@"%@_local_private_key", identifier__]
+                                                             encoding:NSASCIIStringEncoding
+                                                                error:&privateError];
+    if (! localPublicKeyStr || ! localPrivateKeyStr || [localPublicKeyStr isEmpty] || [localPrivateKeyStr isEmpty] || publicError || privateError) {
+        return NO;
+    }
+    
+    RSAKeyPair__.publicKey = localPublicKeyStr;
+    RSAKeyPair__.privateKey = localPrivateKeyStr;
+    return YES;
 }
 
 #pragma encrypt / decrypt
