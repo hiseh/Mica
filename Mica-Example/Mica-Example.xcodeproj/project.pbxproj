@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C02D0011AAE96EA0094C4BB /* MCKeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C02D0001AAE96EA0094C4BB /* MCKeychainItemWrapper.m */; };
 		3C09FFBC1A26C5030081600E /* Parameters.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C09FFBB1A26C5030081600E /* Parameters.plist */; };
 		3C09FFBF1A26FD4C0081600E /* UIColor+MCColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C09FFBE1A26FD4C0081600E /* UIColor+MCColor.m */; };
 		3C09FFC21A2708DA0081600E /* NSString+MCString.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C09FFC11A2708DA0081600E /* NSString+MCString.m */; };
@@ -63,6 +64,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C02CFFF1AAE96EA0094C4BB /* MCKeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCKeychainItemWrapper.h; path = ../Mica/MCKeychainItemWrapper.h; sourceTree = "<group>"; };
+		3C02D0001AAE96EA0094C4BB /* MCKeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCKeychainItemWrapper.m; path = ../Mica/MCKeychainItemWrapper.m; sourceTree = "<group>"; };
 		3C09FFBB1A26C5030081600E /* Parameters.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Parameters.plist; path = ../Mica/Parameters.plist; sourceTree = "<group>"; };
 		3C09FFBD1A26FD4C0081600E /* UIColor+MCColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+MCColor.h"; path = "../Mica/UIColor+MCColor.h"; sourceTree = "<group>"; };
 		3C09FFBE1A26FD4C0081600E /* UIColor+MCColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+MCColor.m"; path = "../Mica/UIColor+MCColor.m"; sourceTree = "<group>"; };
@@ -194,12 +197,14 @@
 		3C3E891C1A368D300030B3E6 /* MCSecurity */ = {
 			isa = PBXGroup;
 			children = (
+				3C02CFFF1AAE96EA0094C4BB /* MCKeychainItemWrapper.h */,
+				3C02D0001AAE96EA0094C4BB /* MCKeychainItemWrapper.m */,
+				3CEC632C1A7A0FC800E6C79C /* MCRSA.h */,
+				3CEC632D1A7A0FC800E6C79C /* MCRSA.m */,
 				3C1784171A451F4D002D8C8E /* NSData+MCSecurity.h */,
 				3C1784181A451F4D002D8C8E /* NSData+MCSecurity.m */,
 				3C17841A1A452046002D8C8E /* NSString+MCSecurity.h */,
 				3C17841B1A452046002D8C8E /* NSString+MCSecurity.m */,
-				3CEC632C1A7A0FC800E6C79C /* MCRSA.h */,
-				3CEC632D1A7A0FC800E6C79C /* MCRSA.m */,
 			);
 			name = MCSecurity;
 			sourceTree = "<group>";
@@ -495,6 +500,7 @@
 				3C36E82A1A89F52500391411 /* BDError.m in Sources */,
 				3C1A26271A35F27700BE1C1F /* NSString+MCRegular.m in Sources */,
 				3C36E8271A89F48500391411 /* BDRSACryptorKeyPair.m in Sources */,
+				3C02D0011AAE96EA0094C4BB /* MCKeychainItemWrapper.m in Sources */,
 				3C54CC751A3037B000D20588 /* MCGridView.m in Sources */,
 				3C4C0CF21A2C531A00BC6CB1 /* UILabel+MCLabel.m in Sources */,
 				3C09FFC21A2708DA0081600E /* NSString+MCString.m in Sources */,

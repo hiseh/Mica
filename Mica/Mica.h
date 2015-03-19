@@ -28,6 +28,7 @@
     #import "NSData+MCSecurity.h"
     #import "NSString+MCSecurity.h"
     #import "MCRSA.h"
+    #import "MCKeychainItemWrapper.h"
 
 #define MC_PARAMETERS_FILE @"Parameters"
 

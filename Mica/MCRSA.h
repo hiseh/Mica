@@ -75,7 +75,7 @@ typedef enum {
 - (BOOL)localKeyWriteToFile;
 
 /**
- Encrypt the text with RSA public key.
+ Encrypts the text with RSA public key.
  @param keySource local key or remote key.
  @param text the string that will be encrypted.
  @return the encrypted string with base64 encode.

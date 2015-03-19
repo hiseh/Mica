@@ -21,12 +21,12 @@ typedef enum {
 - (NSString *)md5;
 
 /**
- Return a new string object encrypting by sha1
+ Returns a new string object encrypting by sha1
  */
 - (NSString *)sha1;
 
 /**
- Return a new string object encrypting by sha512
+ Returns a new string object encrypting by sha512
  */
 - (NSString *)sha512;
 
