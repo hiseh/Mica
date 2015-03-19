@@ -11,7 +11,6 @@
 
 @interface MCKeychainItemWrapper (PrivateMethods)
 - (BOOL)checkOsstatusError:(OSStatus)status;
-
 @end
 
 @implementation MCKeychainItemWrapper
