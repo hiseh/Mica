@@ -31,5 +31,6 @@
     #import "MCKeychainItemWrapper.h"
 
 #define MC_PARAMETERS_FILE @"Parameters"
+#define MICA_PREFIX @"org.hiseh.mica"
 
 #endif
