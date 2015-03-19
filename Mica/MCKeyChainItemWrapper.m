@@ -6,6 +6,8 @@
 //  Copyright (c) 2015年 hiseh. All rights reserved.
 //
 
+NSString * const MC_KEYCHAINITEMWRAPPER_NOTIFICATION = @"org.hiseh.mica.keychain.notification";
+
 #import "MCKeychainItemWrapper.h"
 #import <Security/Security.h>
 
@@ -53,7 +55,7 @@
             resultObject = [NSKeyedUnarchiver unarchiveObjectWithData:(__bridge NSData *)keyData];
         }
         @catch (NSException *exception) {
-            //同志
+            [[NSNotificationCenter defaultCenter] postNotificationName:MC_KEYCHAINITEMWRAPPER_NOTIFICATION object:exception];
         }
         @finally {}
     }

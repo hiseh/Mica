@@ -6,6 +6,8 @@
 //  Copyright (c) 2015年 hiseh. All rights reserved.
 //
 
+extern NSString * const MC_KEYCHAINITEMWRAPPER_NOTIFICATION;
+
 #import <Foundation/Foundation.h>
 /*
  The MCKeychainItemWrapper class is an abstraction lay for the iPhone Keychain communication.
