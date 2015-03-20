@@ -29,8 +29,6 @@
  @param tag A unique tag to identify the key on the keychain for later use.
  @param key The key to add to the keychain.
  @param error Will be populated with an appropriate error message in the event of a parsing or addition failure.
- 
- @return YES if no error, NO otherwise.
  */
 - (void)setPrivateKey:(NSString *)key
                   tag:(NSString *)tag
@@ -44,8 +42,6 @@
  @param tag A unique tag to identify the key on the keychain for later use.
  @param key The key to add to the keychain.
  @param error Will be populated with an appropriate error message in the event of a parsing or addition failure.
- 
- @return YES if no error, NO otherwise.
  */
 - (void)setPublicKey:(NSString *)key
                  tag:(NSString *)tag
@@ -56,8 +52,6 @@
  
  @param tag A unique tag to identify the key on the keychain for later use.
  @param error Will be populated with an appropriate error message in the event of an decryption failure.
- 
- @return YES if no error, NO otherwise.
  */
 - (void)removeKey:(NSString *)tag
             error:(BDError *)error;

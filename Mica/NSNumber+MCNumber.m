@@ -12,9 +12,9 @@
 #pragma mark -
 - (NSString *)friendlyString {
     if ([self integerValue] < 10000) {
-        return [NSString stringWithFormat:@"%d", [self integerValue]];
+        return [NSString stringWithFormat:@"%ld", (long)[self integerValue]];
     } else {
-        return [NSString stringWithFormat:@"%d万", ([self integerValue] / 10000)];
+        return [NSString stringWithFormat:@"%ld万", ([self integerValue] / 10000)];
     }
 }
 

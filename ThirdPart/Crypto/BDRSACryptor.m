@@ -109,7 +109,8 @@ static unsigned char oidSequence [] = { 0x30, 0x0d, 0x06, 0x09, 0x2a, 0x86, 0x48
     free(cipherBuffer);
     
 //    NSString *result = [encryptedData base64EncodedString];
-    NSString *result = [encryptedData base64Encoding];
+//    NSString *result = [encryptedData base64Encoding];
+    NSString *result = [encryptedData base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
     
     return result;
 }
@@ -148,7 +149,8 @@ static unsigned char oidSequence [] = { 0x30, 0x0d, 0x06, 0x09, 0x2a, 0x86, 0x48
     uint8_t *plainBuffer = malloc(plainBufferSize);
     
 //    NSData *incomingData = [cipherText base64DecodedData];
-    NSData *incomingData = [[NSData alloc] initWithBase64Encoding:cipherText];
+//    NSData *incomingData = [[NSData alloc] initWithBase64Encoding:cipherText];
+    NSData *incomingData = [[NSData alloc] initWithBase64EncodedString:cipherText options:NSDataBase64DecodingIgnoreUnknownCharacters];
     uint8_t *cipherBuffer = (uint8_t*)[incomingData bytes];
     size_t cipherBufferSize = SecKeyGetBlockSize(privateKey);
     
@@ -347,7 +349,8 @@ static unsigned char oidSequence [] = { 0x30, 0x0d, 0x06, 0x09, 0x2a, 0x86, 0x48
                               [self X509PublicFooter]];
     
 //    BDDebugLog(@"PEM formatted key:\n%@", returnString);
-    NSString *exportString = [encodedKey base64Encoding];
+//    NSString *exportString = [encodedKey base64Encoding];
+    NSString *exportString = [encodedKey base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
     
     return [NSDictionary dictionaryWithObjectsAndKeys:
             returnString, @"publicKey",
@@ -400,7 +403,8 @@ static unsigned char oidSequence [] = { 0x30, 0x0d, 0x06, 0x09, 0x2a, 0x86, 0x48
     }
     
 //    NSData *strippedPrivateKeyData = [strippedKey base64DecodedData];
-    NSData *strippedPrivateKeyData = [[NSData alloc] initWithBase64Encoding:strippedKey];
+//    NSData *strippedPrivateKeyData = [[NSData alloc] initWithBase64Encoding:strippedKey];
+    NSData *strippedPrivateKeyData = [[NSData alloc] initWithBase64EncodedString:strippedKey options:NSDataBase64DecodingIgnoreUnknownCharacters];
     
 //    BDDebugLog(@"Stripped Private Key Base 64:\n%@",strippedKey);
     
@@ -498,7 +502,8 @@ static unsigned char oidSequence [] = { 0x30, 0x0d, 0x06, 0x09, 0x2a, 0x86, 0x48
     }
     
 //    NSData *strippedPublicKeyData = [strippedKey base64DecodedData];
-    NSData *strippedPublicKeyData = [[NSData alloc] initWithBase64Encoding:strippedKey];
+//    NSData *strippedPublicKeyData = [[NSData alloc] initWithBase64Encoding:strippedKey];
+    NSData *strippedPublicKeyData = [[NSData alloc] initWithBase64EncodedString:strippedKey options:NSDataBase64DecodingIgnoreUnknownCharacters];
     if ([self isX509PublicKey:key])
     {
         unsigned char * bytes = (unsigned char *)[strippedPublicKeyData bytes];
