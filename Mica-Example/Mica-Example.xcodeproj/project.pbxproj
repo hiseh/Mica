@@ -66,7 +66,7 @@
 /* Begin PBXFileReference section */
 		3C02CFFF1AAE96EA0094C4BB /* MCKeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCKeychainItemWrapper.h; path = ../Mica/MCKeychainItemWrapper.h; sourceTree = "<group>"; };
 		3C02D0001AAE96EA0094C4BB /* MCKeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCKeychainItemWrapper.m; path = ../Mica/MCKeychainItemWrapper.m; sourceTree = "<group>"; };
-		3C09FFBB1A26C5030081600E /* Parameters.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Parameters.plist; path = ../Mica/Parameters.plist; sourceTree = "<group>"; };
+		3C09FFBB1A26C5030081600E /* Parameters.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Parameters.plist; path = ../../Mica/Parameters.plist; sourceTree = "<group>"; };
 		3C09FFBD1A26FD4C0081600E /* UIColor+MCColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+MCColor.h"; path = "../Mica/UIColor+MCColor.h"; sourceTree = "<group>"; };
 		3C09FFBE1A26FD4C0081600E /* UIColor+MCColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+MCColor.m"; path = "../Mica/UIColor+MCColor.m"; sourceTree = "<group>"; };
 		3C09FFC01A2708DA0081600E /* NSString+MCString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+MCString.h"; path = "../Mica/NSString+MCString.h"; sourceTree = "<group>"; };
@@ -167,9 +167,9 @@
 			isa = PBXGroup;
 			children = (
 				3C3E891C1A368D300030B3E6 /* MCSecurity */,
-				3CD95DFA1A2EECA60041F343 /* MCView */,
 				3C9B48EB1A2D870100623E1A /* MCUI */,
 				3C9B48EA1A2D86E100623E1A /* MCUtilities */,
+				3CD95DFA1A2EECA60041F343 /* MCView */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -275,12 +275,13 @@
 			children = (
 				3C9DCCD41A25C133002C4A8B /* AppDelegate.h */,
 				3C9DCCD51A25C133002C4A8B /* AppDelegate.m */,
-				3C9DCCD71A25C133002C4A8B /* ViewController.h */,
-				3C9DCCD81A25C133002C4A8B /* ViewController.m */,
-				3C9DCCDA1A25C133002C4A8B /* Main.storyboard */,
 				3C9DCCDD1A25C133002C4A8B /* Images.xcassets */,
 				3C9DCCDF1A25C133002C4A8B /* LaunchScreen.xib */,
+				3C9DCCDA1A25C133002C4A8B /* Main.storyboard */,
+				3C09FFBB1A26C5030081600E /* Parameters.plist */,
 				3C9DCCD01A25C133002C4A8B /* Supporting Files */,
+				3C9DCCD71A25C133002C4A8B /* ViewController.h */,
+				3C9DCCD81A25C133002C4A8B /* ViewController.m */,
 			);
 			path = "Mica-Example";
 			sourceTree = "<group>";
@@ -327,7 +328,6 @@
 				3C09FFBA1A26C4A40081600E /* Classes */,
 				3C9B48E51A2D6A7800623E1A /* Images */,
 				3C9DCCF81A25C1B9002C4A8B /* Mica.h */,
-				3C09FFBB1A26C5030081600E /* Parameters.plist */,
 				3CDFAF361A8C50920074327C /* Key.plist */,
 			);
 			name = Mica;
