@@ -1,15 +1,15 @@
-#Mica
+# Mica
 Mica is a light library for IOS. 
 
 Version 0.2.0
 
-##Requirements
+## Requirements
 This is tested against IOS 6.0+ and uses ARC.
 
-##License
+## License
 Mica is available under the MIT license. See the LICENSE file for more info.
 
-##Architecture
+## Architecture
 * `MCSecurity`
 	- `NSData+MCSecurity`
 	- `NSString+MCSecurity`
@@ -30,15 +30,15 @@ Mica is available under the MIT license. See the LICENSE file for more info.
 	- `NSString+MCString`
 	- `NSNumber+MCNumber`
 
-##Document
-###Parameters File
+## Document
+### Parameters File
 You can define the `MC_PARAMETERS_FILE` variability in Mica.h file. The parameters file architecutre is
 ![Parameters File Screenshot](/doc/parameters_file_screenshot.png)
 
-###Usage
+### Usage
 see sample Xcode project in /Mica-Example
 
-##Author
+## Author
 Created by Hiseh<br />
 [GitHub](https://github.com/hiseh/Mica.git)
 
